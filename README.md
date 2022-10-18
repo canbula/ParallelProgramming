@@ -1,5 +1,15 @@
 # ParallelProgramming.2022.2023.Fall
-Repository for Parallel Programming course given by Assoc. Prof. Dr. Bora Canbula at Computer Engineering Department of Manisa Celal Bayar University.
+Repository for Parallel Programming course given by Assoc. Prof. Dr. Bora Canbula 
+at Computer Engineering Department of Manisa Celal Bayar University.
+
+# Course Information
+This course is about parallel programming using Python. Students will learn the basic concepts 
+of parallel programming like threads, processes, and distributed systems. They will also learn 
+how to use Locks, Semaphores, and Queues to synchronize threads and processes. Course starts 
+with a brief introduction to Python and then continues with the asynchronous programming using 
+asyncio. In the following sections, students will learn how to create multithread and multiprocess 
+applications. Finally, students will learn how to create distributed applications using cluster 
+computing with containers. You can find some supplementary videos for this course on my YouTube channel.
 
 # Weekly Content
 You can find the codes that written in the laboratory in the folder WeekXX.
