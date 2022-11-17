@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     t1.join()
     t2.join()
-    t2.join()
+    t3.join()
     
  ```
     
