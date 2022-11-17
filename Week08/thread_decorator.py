@@ -19,7 +19,7 @@ class MakeThreads:
 
 @MakeThreads(4)
 def main():
-    print(f"Hello from {threading.current_thread().name}")
+    print(f"Hi from {threading.current_thread().name}")
 
 
 if __name__ == '__main__':
