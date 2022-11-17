@@ -9,7 +9,7 @@ class MakeThreads:
     def __call__(self, func):
         def wrapper(*args, **kwargs):
             for i in range(self.n):
-                t = threading.Thread(target=func, args=args, kwargs=kwargs)
+                t = threading.Thread(target=func, name=f"Thread {i}", args=args, kwargs=kwargs)
                 self.threads.append(t)
                 t.start()
             for t in self.threads:
@@ -19,7 +19,7 @@ class MakeThreads:
 
 @MakeThreads(4)
 def main():
-    print(f"Hello from thread {threading.get_ident()}")
+    print(f"Hello from {threading.current_thread().name}")
 
 
 if __name__ == '__main__':
