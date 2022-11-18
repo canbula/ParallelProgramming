@@ -1,0 +1,34 @@
+assume that you get up late and you have to catch to bus for midterm exam today.
+you need to prepare a breakfast in order to get maximum performance from your brain but you don't
+have much time so you need to prepare your breakfast as fast as possible.
+
+you will eat:
+2 fried eggs
+2 piece of toast with butter
+sliced cheese and sliced tomatoes
+a cup of tea
+
+you also need to wear something before go out and it takes 4 minute.
+
+2 fried eggs takes 3 minutes to scramble and 4 minutes to cook. 1 minute to close the cooker and take the egg.(if eggs wait more than 3 minutes it become cold and not eatable )
+butter takes 15 minutes to become room temperature for make it spreadable.
+2 pieces of bread takes 1 minute to slice, 4 min to toast and 1 minute to buttering.(if toasts wait more than 3 minutes it become cold and you cannot butter the breads)
+cheese takes 2 minutes to slice and tomato takes 3 min to slice.
+tea takes 2 minutes to prepare and 10 minutes to brew.(if tea wait more than 3 minutes it become cold and not drinkable.)
+
+
+solution:
+yağı çıkart		          /0		-15dk
+yumurtaları çırp		    /dk3		
+ ekmekleri kes		      /dk4
+çayı hazırla		        /dk6
+çayı demlemeye koy	    /dk6		-16dk		x dk19
+peynirle domatesi kes 	/dk11
+ekmekleri kızart		    /dk11		-15dk		x dk18
+yumurtaları pişir	      /dk11		-15dk		x dk18
+giyin				            /dk15
+yumurtaları tabağa al	  /dk16
+ekmeklere yağ sür	      /dk17
+
+hızlıca ye.
+					
