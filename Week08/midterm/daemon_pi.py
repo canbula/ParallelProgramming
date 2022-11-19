@@ -6,8 +6,8 @@ class DaemonPi(threading.Thread):
     def __init__(self, n: int = 1000):
         super().__init__()
         self.n = n
-        self.inner = 0
-        self.total = 0
+        self.__inner = 0
+        self.__total = 0
 
     def run(self):
         for _ in range(self.n):
