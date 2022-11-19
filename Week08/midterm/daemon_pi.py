@@ -4,7 +4,7 @@ import random
 
 class DaemonPi(threading.Thread):
     def __init__(self, n: int = 1000):
-        super().__init__()
+        super().__init__(daemon=True)
         self.n = n
         self.inner = 0
         self.total = 0
