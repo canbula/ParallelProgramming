@@ -6,20 +6,20 @@ class DaemonPi(threading.Thread):
     def __init__(self, n: int = 1000):
         super().__init__()
         self.n = n
-        self.inner = 0
-        self.total = 0
+        self.__inner = 0
+        self.__total = 0
         self.daemon = True
 
     def run(self):
         for _ in range(self.n):
             x = random.uniform(-1, 1)
             y = random.uniform(-1, 1)
-            self.total += 1
+            self.__total += 1
             if x ** 2 + y ** 2 <= 1:
-                self.inner += 1
+                self.__inner += 1
 
     def pi(self):
-        return 4 * self.inner / self.total
+        return 4 * self.__inner / self.__total
 
 
 def main():
