@@ -21,7 +21,8 @@ class DaemonPi(threading.Thread):
                     self.__inner += 1
 
     def pi(self):
-        return 4 * self.__inner / self.__total
+        with self.lock:
+            return 4 * self.__inner / self.__total
 
 
 def main():
