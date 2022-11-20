@@ -11,7 +11,7 @@ class DaemonPi(threading.Thread):
         self.daemon = True
 
     def run(self):
-        for _ in range(self.n):
+        while True:
             x = random.uniform(-1, 1)
             y = random.uniform(-1, 1)
             self.__total += 1
