@@ -1,5 +1,6 @@
 import hashlib
-
+import os
+import threading
 
 def text_to_md5(text: str) -> str:
     for i in range(2):
@@ -9,9 +10,27 @@ def text_to_md5(text: str) -> str:
 
 def decorator_for_you_to_implement(func):
     def wrapper(*args, **kwargs):
-        return func(*args, **kwargs)
-    return wrapper
+        passwd = kwargs["passwd"] if "passwd" in kwargs else args[0]
+        start = kwargs["start"] if "start" in kwargs else args[1]
+        end = kwargs["end"] if "end" in kwargs else args[2]
 
+        cpu_count = os.cpu_count()
+
+        step = int((end-start)/cpu_count)
+        intervals = [_ for _ in range(start,end,step)]
+        intervals.append(end)
+
+        threads = []
+
+        for i in range(cpu_count):
+            start = intervals[i]
+            end = intervals[i + 1]
+            t = threading.Thread(target=func, name=f"Thread {i}", args=(passwd, start, end))
+            threads.append(t)
+            t.start()
+        for t in threads:
+            t.join()
+    return wrapper
 
 @decorator_for_you_to_implement
 def guess_the_password(password: str, start: int, end: int) -> str:
