@@ -27,7 +27,6 @@ class DaemonPi(threading.Thread):
 def main():
     pi_thread = DaemonPi()
     pi_thread.start()
-    pi_thread.join()
     while True:
         radius = input("Enter radius: ")
         if radius == "q":
