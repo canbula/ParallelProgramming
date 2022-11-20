@@ -156,9 +156,11 @@ class ChocolateChipCookie:
         if not self.__combine_the_dry_and_wet_ingredients:
             logging.error("The dry and wet ingredients are not combined")
             return None
+        self.__chef_is_busy = True
         logging.info("[START] Adding the chocolate chips")
         await asyncio.sleep(1 * self._minute)
         logging.info("[END] Adding the chocolate chips")
+        self.__chef_is_busy = False
         self.__add_chocolate_chips = True
         return None
 
