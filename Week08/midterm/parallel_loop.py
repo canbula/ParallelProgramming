@@ -1,4 +1,6 @@
 import hashlib
+import threading
+import os
 
 
 def text_to_md5(text: str) -> str:
@@ -9,6 +11,9 @@ def text_to_md5(text: str) -> str:
 
 def decorator_for_you_to_implement(func):
     def wrapper(*args, **kwargs):
+        for _ in range(os.cpu_count()):
+            t = threading.Thread(target=func, args=args, kwargs=kwargs)
+            t.start()
         return func(*args, **kwargs)
     return wrapper
 
