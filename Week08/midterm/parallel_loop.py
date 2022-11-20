@@ -1,6 +1,7 @@
 import hashlib
 import os
 import threading
+import multiprocessing as mp
 
 def text_to_md5(text: str) -> str:
     for i in range(2):
@@ -25,7 +26,7 @@ def decorator_for_you_to_implement(func):
         for i in range(cpu_count):
             start = intervals[i]
             end = intervals[i + 1]
-            t = threading.Thread(target=func, name=f"Thread {i}", args=(passwd, start, end))
+            t = mp.Process(target=func, name=f"Thread {i}", args=(passwd, start, end))
             threads.append(t)
             t.start()
         for t in threads:
