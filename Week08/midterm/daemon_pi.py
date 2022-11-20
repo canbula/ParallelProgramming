@@ -9,14 +9,16 @@ class DaemonPi(threading.Thread):
         self.__inner = 0
         self.__total = 0
         self.daemon = True
+        self.lock = threading.Lock()
 
     def run(self):
         while True:
             x = random.uniform(-1, 1)
             y = random.uniform(-1, 1)
-            self.__total += 1
-            if x ** 2 + y ** 2 <= 1:
-                self.__inner += 1
+            with self.lock:
+                self.__total += 1
+                if x ** 2 + y ** 2 <= 1:
+                    self.__inner += 1
 
     def pi(self):
         return 4 * self.__inner / self.__total
