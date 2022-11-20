@@ -8,6 +8,7 @@ class DaemonPi(threading.Thread):
         self.n = n
         self.inner = 0
         self.total = 0
+        self.daemon = True
 
     def run(self):
         for _ in range(self.n):
