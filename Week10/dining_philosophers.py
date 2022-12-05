@@ -3,15 +3,14 @@ import sys
 
 import pygame
 
+# Fixes the File not found error when running from the command line.
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
 
 class BackgroundFurniture(pygame.sprite.Sprite):
     def __init__(self, image_file, location, scale_factor=1.0, horizontal_flip=False, vertical_flip=False):
         super().__init__()
         self.image = pygame.image.load(image_file)
-        self.image = pygame.transform.flip(
-            self.image, horizontal_flip, vertical_flip)
+        self.image = pygame.transform.flip(self.image, horizontal_flip, vertical_flip)
         self.image = pygame.transform.scale(
             self.image,
             (
@@ -26,8 +25,7 @@ class Chair(pygame.sprite.Sprite):
     def __init__(self, image_file, location):
         super().__init__()
         self.image = pygame.image.load(image_file)
-        self.image = pygame.transform.scale(
-            self.image, (self.image.get_width()*4, self.image.get_height()*4))
+        self.image = pygame.transform.scale(self.image, (self.image.get_width()*4, self.image.get_height()*4))
         self.rect = self.image.get_rect(center=location)
 
 
@@ -36,10 +34,8 @@ class Character(pygame.sprite.Sprite):
         super().__init__()
         self.image = pygame.image.load("assets/characters.png")
         self.rect = self.image.get_rect(center=location)
-        self.image = self.image.subsurface(pygame.Rect(
-            abs(state_id)*16, character_id*16, 16, 16))
-        self.image = pygame.transform.scale(
-            self.image, (self.image.get_width()*4, self.image.get_height()*4))
+        self.image = self.image.subsurface(pygame.Rect(abs(state_id)*16, character_id*16, 16, 16))
+        self.image = pygame.transform.scale(self.image, (self.image.get_width()*4, self.image.get_height()*4))
         if state_id < 0:
             self.image = pygame.transform.flip(self.image, True, False)
         self.direction = "right"
@@ -59,8 +55,7 @@ class Meal(pygame.sprite.Sprite):
     def __init__(self, location):
         super().__init__()
         self.image = pygame.image.load("assets/spaghetti_full.png")
-        self.image = pygame.transform.scale(
-            self.image, (self.image.get_width()*1, self.image.get_height()*1))
+        self.image = pygame.transform.scale(self.image, (self.image.get_width()*1, self.image.get_height()*1))
         self.rect = self.image.get_rect(center=location)
 
 
@@ -68,8 +63,7 @@ class Chopstick(pygame.sprite.Sprite):
     def __init__(self, angle, location):
         super().__init__()
         self.image = pygame.image.load("assets/chopstick.png")
-        self.image = pygame.transform.scale(
-            self.image, (self.image.get_width()*0.3, self.image.get_height()*0.3))
+        self.image = pygame.transform.scale(self.image, (self.image.get_width()*0.3, self.image.get_height()*0.3))
         self.image = pygame.transform.rotate(self.image, angle)
         self.rect = self.image.get_rect(center=location)
 
@@ -89,24 +83,16 @@ background_group.add(
         for x in range(0, WIDTH+100, 62) for y in range(0, HEIGHT+100, 46)
     ]
 )
-background_group.add(BackgroundFurniture(
-    "assets/carpet.png", (WIDTH//2, HEIGHT//2), 12))
-background_group.add(BackgroundFurniture(
-    "assets/fireplace.png", (WIDTH//2, 60), 4))
-background_group.add(BackgroundFurniture(
-    "assets/music_player.png", (720, 90), 4))
-background_group.add(BackgroundFurniture(
-    "assets/sofa_front.png", (560, 80), 4))
-background_group.add(BackgroundFurniture(
-    "assets/sofa_single_right.png", (740, 200), 4))
-background_group.add(BackgroundFurniture(
-    "assets/stairs.png", (700, 440), 4, True))
+background_group.add(BackgroundFurniture("assets/carpet.png", (WIDTH//2, HEIGHT//2), 12))
+background_group.add(BackgroundFurniture("assets/fireplace.png", (WIDTH//2, 60), 4))
+background_group.add(BackgroundFurniture("assets/music_player.png", (720, 90), 4))
+background_group.add(BackgroundFurniture("assets/sofa_front.png", (560, 80), 4))
+background_group.add(BackgroundFurniture("assets/sofa_single_right.png", (740, 200), 4))
+background_group.add(BackgroundFurniture("assets/stairs.png", (700, 440), 4, True))
 background_group.add(BackgroundFurniture("assets/desk.png", (170, 120), 3))
-background_group.add(BackgroundFurniture(
-    "assets/table_horizontal.png", (WIDTH//2, HEIGHT//2), 4))
+background_group.add(BackgroundFurniture("assets/table_horizontal.png", (WIDTH//2, HEIGHT//2), 4))
 
-title_text = Text("Dining Philosophers", (WIDTH//2 -
-                  100, HEIGHT - 50), 24, (200, 255, 200))
+title_text = Text("Dining Philosophers", (WIDTH//2 - 100, HEIGHT - 50), 24, (200, 255, 200))
 
 meal_0 = Meal((WIDTH//2 - 40, HEIGHT//2 - 50))
 meal_1 = Meal((WIDTH//2 + 40, HEIGHT//2 - 50))
