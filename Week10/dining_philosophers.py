@@ -1,10 +1,10 @@
 import os
 import sys
-
 import pygame
 
 # Fixes the File not found error when running from the command line.
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 
 class BackgroundFurniture(pygame.sprite.Sprite):
     def __init__(self, image_file, location, scale_factor=1.0, horizontal_flip=False, vertical_flip=False):
