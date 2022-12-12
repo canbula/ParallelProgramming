@@ -32,8 +32,6 @@ class PrimeFinder(multiprocessing.Process):
         self.array = array
 
     def run(self) -> None:
-        print(self.start_number)
-        print(self.end)
         for i in range(self.start_number, self.end + 1):
             if is_prime(i):
                 self.array[i] = i
