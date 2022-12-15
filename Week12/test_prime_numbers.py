@@ -64,10 +64,10 @@ def test_parallel():
 
 def test_speed():
     start = time.time()
-    prime_numbers.find_primes_serial(100000)
+    prime_numbers.find_primes_serial(1_000_000)
     serial_time = time.time() - start
     start = time.time()
-    prime_numbers.find_primes_parallel(100000, 4)
+    prime_numbers.find_primes_parallel(1_000_000, 4)
     parallel_time = time.time() - start
     assert parallel_time < serial_time, "find_primes_parallel should be faster than find_primes_serial"
 
