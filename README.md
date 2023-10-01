@@ -15,9 +15,10 @@ computing with containers. You can find some supplementary videos for this cours
 You can find the codes that written in the laboratory in the folder WeekXX.
 
 # Problem Sets
-In the root folder there is a ProblemSet.pdf file, which is updated weekly after every lecture.
+In the root folder there will be a ProblemSet.pdf file, which is updated weekly after every lecture.
 
-# Videos from Previous Years
-There is a YouTube playlist, which includes the supplementary videos for the course as given in 2021. 
-The videos do not include the introductory Python and asynchronous programming part, so they start from Week06.
+# Codes and Videos from Previous Years
+You can change the branch to see the codes from previous years. Also there is a YouTube playlist, 
+which includes the supplementary videos for the course as given in 2021. The videos do not include 
+the introductory Python and asynchronous programming part, so they start from Week06.
 https://www.youtube.com/playlist?list=PL30NBs02RsiUbmXVPDo56APsU0xa6gfL2
