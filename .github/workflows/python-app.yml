@@ -6,10 +6,10 @@ name: Python application
 on:
   push:
     branches: [ "master" ]
-    paths: ['Week12/**']
+    paths: ['Week02/**']
   pull_request:
     branches: [ "master" ]
-    paths: ['Week12/**']
+    paths: ['Week02/**']
 
 permissions:
   contents: read
@@ -21,10 +21,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 3.10
+    - name: Set up Python 3.12
       uses: actions/setup-python@v3
       with:
-        python-version: "3.10"
+        python-version: "3.12"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -38,4 +38,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest -q --tb=no 'Week12/test_prime_numbers.py'
+        pytest -q --tb=no 'Week02/test_first.py'
