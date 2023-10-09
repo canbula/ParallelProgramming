@@ -14,8 +14,8 @@ computing with containers. You can find some supplementary videos for this cours
 # Weekly Content
 You can find the codes that written in the laboratory in the folder WeekXX.
 
-# Problem Sets
-In the root folder there will be a ProblemSet.pdf file, which is updated weekly after every lecture.
+# Lecture Notes and Problem Sets
+In the root folder there is a LectureNotes.pdf file, which is updated weekly after every lecture.
 
 # Codes and Videos from Previous Years
 You can change the branch to see the codes from previous years. Also there is a YouTube playlist, 
