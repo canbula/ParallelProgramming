@@ -11,7 +11,7 @@ def remove_duplicates(my_list)
 
 def list_counts(my_list)
    counts = {}
-    for item in input_list:
+    for item in my_list:
         if item in counts:
             counts[item] += 1
         else:
