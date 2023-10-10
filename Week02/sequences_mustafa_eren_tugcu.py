@@ -6,12 +6,8 @@ my_dict = {
             "education": "Master Degree",
             "birth_year": 2001 
           }
-def remove_duplicates(list):
-    new_list = []
-    for element in list:
-        if element not new_list:
-            new_list.append(element)
-    return new_list 
+def remove_duplicates(my_list):
+    return list(set(my_list))
 
 def list_counts(list):
     counts = {}
