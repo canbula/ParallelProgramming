@@ -1,6 +1,6 @@
-my_list = [Ali, Ahmet, Ayşe, Fatma, Ali]
+my_list = ["Ali", "Ahmet", "Ayşe", "Fatma", "Ali"]
 my_tuple = (1, 2, 3, 4, 5, 6)
-my_set = {Muradiye, Yunusemre, Şehzadeler, Soma, Ahmetli}
+my_set = {"Muradiye", "Yunusemre", "Şehzadeler", "Soma", "Ahmetli"}
 my_dict = {"name": "Kadir",
            "surname": "Karaduman",
            "age": 21,
