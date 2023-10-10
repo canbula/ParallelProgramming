@@ -20,5 +20,5 @@ def list_counts(my_list):
             counts[item] = 1
     return counts
 
-def reverse_key(dictionary):
+def reverse_dict(dictionary):
     return {value: key for key, value in dictionary.items()}
