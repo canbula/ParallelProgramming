@@ -18,10 +18,7 @@ def list_counts(input_:list) -> dict:
 def reverse_dict(input_:dict) -> dict:
   ret={}
   for i in input_:
-    if input_[i] not in ret:
-      ret[input_[i]]=[i]
-    else:
-    	ret[input_[i]].append(i)
+    ret[input_[i]]=[i]
   return ret
 
 """
