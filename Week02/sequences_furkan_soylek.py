@@ -18,7 +18,7 @@ def list_counts(input_:list) -> dict:
 def reverse_dict(input_:dict) -> dict:
   ret={}
   for i in input_:
-    ret[input_[i]]=[i]
+    ret[input_[i]]=i
   return ret
 
 """
