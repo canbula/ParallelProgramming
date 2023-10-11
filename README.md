@@ -1,4 +1,4 @@
-# ParallelProgramming.2023.2024.Fall
+# Parallel Programming 2023
 Repository for Parallel Programming course given by Assoc. Prof. Dr. Bora Canbula 
 at Computer Engineering Department of Manisa Celal Bayar University.
 
