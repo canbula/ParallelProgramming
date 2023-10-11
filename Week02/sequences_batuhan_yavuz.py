@@ -8,13 +8,7 @@ my_dict = {"isim" : "Batuhan",
            "yaş" : "22"}
 
 def remove_duplicates (input_list):
-  unique_list = []
-
-  for item in input_list:
-    if item not in def_list:
-      unique_list.append(item)
-
-  return unique_list 
+ return list(set(input_list))
 
 
 def list_counts(input_list):
