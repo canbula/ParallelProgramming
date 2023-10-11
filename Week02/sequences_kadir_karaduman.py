@@ -7,7 +7,7 @@ my_dict = {"name": "Kadir",
            "department": "Computer Engineering",
           }
 
-def list_duplicates(input_list):
+def remove_duplicates(input_list):
     return list(set(input_list))
 
 def list_counts(exp_list):
