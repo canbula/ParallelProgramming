@@ -10,7 +10,7 @@ my_dict = {"name": "Kadir",
 def list_duplicates(input_list):
     return list(set(input_list))
 
-def count_items(exp_list):
+def list_counts(exp_list):
     item_count = {}
     for item in exp_list:
         if item in item_count:
