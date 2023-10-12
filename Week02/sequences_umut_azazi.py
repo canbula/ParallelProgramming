@@ -1,19 +1,18 @@
-my_list = [1,2,3,4]
+def remove_duplicates(input_list):
+    return list(set(input_list))
 
-my_tuple = (1,2,3,4)
+def list_counts(input_list):
+    counts = {}
+    for item in input_list:
+        counts[item] = counts.get(item, 0) + 1
+    return counts
 
-my_set = {1,2,3,4}
+def reverse_dict(input_dict):
+    return {v: k for k, v in input_dict.items()}
 
-my_dict = {"Name" : "Umut"}
+# Creating the specified data structures
+my_list = [1, 2, 3, 1, 2, 4, 5]
+my_tuple = (1, 2, 3, 4, 5)
+my_set = {1, 2, 3, 4, 5}
+my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 2, 'e': 1}
 
-def remove_dublicates(seq:list) -> list:
-  return list(set(seq))
-
-def list_counts(seq: list) -> dict:
-    return {item: seq.count(item) for item in set(seq)}
-
-
-def reverse_dict(d: dict) -> dict:
-    return {value: key for key, value in d.items()}
-  
-  
