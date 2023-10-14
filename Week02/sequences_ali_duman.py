@@ -10,7 +10,7 @@ my_dict = {
     "three": "Bullets",
     "four": "He",
     "five": "Had",
-    "six": "Words",
+    "six": "Words"
 }
 
 
