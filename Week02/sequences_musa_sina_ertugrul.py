@@ -26,11 +26,11 @@ def remove_duplicates(new_list: List)->List:
 
 def list_counts(new_list: List)-> Dict:
     """This function counts items"""
-    return {str(tmp_item) : new_list.count(tmp_item) for tmp_item in new_list}
+    return {tmp_item : new_list.count(tmp_item) for tmp_item in new_list}
 
 def reverse_dict(new_dict: Dict)-> Dict:
     """This function reverse dict"""
     return {
-        str(tmp_value) : tmp_key
+        tmp_value : tmp_key
         for tmp_key, tmp_value in zip(list(new_dict.keys()),list(new_dict.values()))
         }
