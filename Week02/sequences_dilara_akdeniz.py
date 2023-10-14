@@ -6,7 +6,7 @@ my_dict = {"name" : "dilara", "surname" : "akdeniz", "number" : "200315067", "ge
 def remove_duplicates(my_list):
   return list(set(my_list))
 
-def list_count(my_list):
+def list_counts(my_list):
   return {i: my_list.count(i) for i in my_list}
 
 def reverse_dict(my_dict):
