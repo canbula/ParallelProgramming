@@ -4,10 +4,17 @@ my_set = {10, 11, (5,6,7), 12, 13}
 my_dict = {"Ada": 88, "Kübra": 100, "Sena": 5}
 
 def remove_duplicates(input_list):
-    return list(set(input_list)
+    new_list = []
+
+    for i in input_list:
+            if i not in new_list:
+                new_list.append(i)
+
+    return new_list
+
 
 def list_counts(input_list):
-  counter = {}
+    counter = {}
     for i in input_list:
       if i in counter:
         counter[i] +=1
@@ -16,8 +23,9 @@ def list_counts(input_list):
     return counter
 
 def reverse_dict(input_dict):
-  reversed_dict{}
+    reversed_dict = {}
     for key, value in input_dict.items():
       reversed_dict[value] = key
 
     return reversed_dict
+
