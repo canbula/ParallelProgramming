@@ -7,13 +7,13 @@ def remove_duplicates(my_list):
     return list(set(my_list))
 
 def list_counts(my_list):
-    new_dict = {}
+    new_dict ={}
     for i in my_list:
-      if i in new_dict :
-        new_dict[i] +=1
-      else :
-        new_dict[i] =1
-     return (new_dict)
+        if i in new_dict:
+            new_dict[i] +=1
+        else:
+            new_dict[i]=1    
+    return(new_dict)
 
 def reverse_dict(my_dict):
      new_dict = {}
