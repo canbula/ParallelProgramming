@@ -15,7 +15,7 @@ def list_counts(my_list):
         the_dict[item] = occurance
     return the_dict
 
-def revers_dict(my_dict):
+def reverse_dict(my_dict):
     the_dict = dict(my_dict)
     new_dict = {}
     for item in the_dict:
