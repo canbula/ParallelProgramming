@@ -7,7 +7,7 @@ def remove_duplicates(my_list) -> list:
   return list(set(my_list))
 
 def list_counts(my_list) -> dict:
-  return {"i" : my_list.count(i) for i in my_list}
+  return {i : my_list.count(i) for i in my_list}
 
 def reverse_dict(my_dict) -> dict:
   return {value: key for key, value in my_dict.items()}
