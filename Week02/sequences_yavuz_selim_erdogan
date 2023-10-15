@@ -1,0 +1,14 @@
+my_list = [7,"hi",True,7,True,False]
+my_tuple = (10,12,15)
+my_set = {"s","e","l","i","m"}
+my_dict = {"x":30, "y":60,"z":90}
+
+def remove_duplicates(my_list):
+    return list(set(my_list))
+
+def list_counts(my_list):
+     return {k: my_list.count(k) for k in my_list}
+
+
+def reverse_dict(my_dict):
+    return {x:y for y,x in my_dict.items()}
