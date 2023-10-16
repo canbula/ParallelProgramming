@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-custom_power = (lambda x=0, /, e=1 : x**e)?
+custom_power = (lambda x=0, /, e=1 : x**e)
 
 
 def custom_function(x = 0, y = 0, /, a = 1, b = 1, *, c = 1) -> float:
