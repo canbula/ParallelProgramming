@@ -20,7 +20,7 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
     return float((x**a + y **b ) / c)
 
 
-def fn_w_counter() -> Tuple[int, Dict[str, int]] :
+def fn_w_counter() -> typing.Tuple[int, typing.Dict[str, int]] :
     caller_count = defaultdict(int)
     total_calls = 0
     
