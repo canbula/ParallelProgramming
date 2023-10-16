@@ -1,5 +1,5 @@
 from collections import defaultdict
-from typing import Tuple, Dict
+import typing 
 
 custom_power = lambda x = 0 , / ,e = 1, : x**e 
 
