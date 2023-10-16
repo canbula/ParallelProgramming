@@ -23,7 +23,7 @@ def custom_function(x = 0, y = 0, /, a = 1, b = 1, *, c = 1) -> float:
     return float((x ** a + y ** b) / c)
 
 
-    def fn_w_counter()
+    def fn_w_counter():
       caller_count = defaultdict(int)
       total_calls = 0
 
