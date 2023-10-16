@@ -1,5 +1,5 @@
 from collections import defaultdict
-from typing import Tuple
+from typing import Tuple, Dict
 
 custom_power = lambda x = 0 , / ,e = 1, : x**e 
 
@@ -20,7 +20,7 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
     return float((x**a + y **b ) / c)
 
 
-def fn_w_counter() -> Tuple[int, dict[str, int]] :
+def fn_w_counter() -> Tuple[int, Dict[str, int]] :
     caller_count = defaultdict(int)
     total_calls = 0
     
