@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import defaultdict import inspect
 
 custom_power = (lambda x=0, /, e=1 : x**e)
 
@@ -31,7 +31,7 @@ def custom_function(x = 0, y = 0, /, a = 1, b = 1, *, c = 1) -> float:
           nonlocal total_calls
           caller_name = inspect.stack()[1].frame.f.globals['__name__']
           caller_count[caller_name] +=1
-          total_name +=1
+          total_calls +=1
           return total_calls, caller_count
 
 return inner_function
