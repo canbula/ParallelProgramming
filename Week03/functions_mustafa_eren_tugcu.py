@@ -19,8 +19,7 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
     """
     return float((x**a + y **b ) / c)
 
-
-def fn_w_counter() -> typing.Tuple[typing.Callable[[str], None], typing.Callable[[], typing.Tuple[int, typing.Dict[str, int]]]] :
+def fn_w_counter() -> typing.Tuple[int, typing.Dict[str, int]]:
     caller_count = defaultdict(int)
     total_calls = 0
     
@@ -29,8 +28,7 @@ def fn_w_counter() -> typing.Tuple[typing.Callable[[str], None], typing.Callable
         caller_name = __import__('inspect').currentframe().f_back.f_globals['__name__']
         caller_count[caller_name] += 1
         total_calls += 1
-    def get_counts():
-        return total_calls, dict(caller_count)
+        
+    return total_calls, dict(caller_count)
 
-    return _fn_w_counter, get_counts
     
