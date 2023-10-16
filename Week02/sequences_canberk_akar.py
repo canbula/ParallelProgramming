@@ -7,7 +7,7 @@ my_dict={
     "year"     :1998
 }
 
-def remove_dublicates(list):
+def remove_duplicates(list):
     dub=[]
     for item in list:
         if item not in dub:
