@@ -28,7 +28,8 @@ def fn_w_counter() -> typing.Tuple[int, typing.Dict[str, int]]:
         caller_name = __import__('inspect').currentframe().f_back.f_globals['__name__']
         caller_count[caller_name] += 1
         total_calls += 1
-        
-    return total_calls, dict(caller_count)
+        return total_calls, dict(caller_count)
+    
+    return _fn_w_counter
 
     
