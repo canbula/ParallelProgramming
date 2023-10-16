@@ -29,8 +29,4 @@ def reverse_dict(dict):
    reversed_dict = {value: key for key, value in dict.items()}
    return reversed_dict
 
-print(remove_duplicates(my_list))
-print(list_counts(my_list))
-print(reverse_dict(my_dict))
-
 
