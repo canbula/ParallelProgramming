@@ -24,10 +24,7 @@ def list_counts(list):
    return dictionary
 
 def reverse_dict(dictionary):
-    reversed_dict = {}
-    for key, value in dictionary.items():
-        if value not in reversed_dict:
-            reversed_dict[value] = key
-    return reversed_dict
-
-
+    dict = {}
+    for item in dictionary.items():
+        dict[item[1]] = item[0]
+    return dict
