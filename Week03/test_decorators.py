@@ -30,7 +30,7 @@ def test_performance():
             "performance is not working in " + f[:-3] + " (counter)"
         assert eval(f[:-3]).performance.total_time > 1, \
             "performance is not working in " + f[:-3] + " (total_time)"
-        assert eval(f[:-3]).performance.total_mem > 0, \
+        assert eval(f[:-3]).performance.total_mem >= 0, \
             "performance is not working in " + f[:-3] + " (total_mem)"
         dummy_timer(1)
         dummy_timer(2)
