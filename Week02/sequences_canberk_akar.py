@@ -1,5 +1,5 @@
 my_list  = ["a","b","c","d","e"]
-my_tuple = {"canberk","akar",25}
+my_tuple = ("canberk","akar",25)
 my_set   = {"honda","toyota","fiat","fiat"}
 my_dict={
     "name"     :"The Sopranos",
