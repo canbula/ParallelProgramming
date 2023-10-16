@@ -1,9 +1,9 @@
 from collections import defaultdict
 
 
-custom_power = lambda x = 0 , e = 1, /: x**e 
+custom_power = lambda x = 0 , / ,e = 1, : x**e 
 
-def custom_equation(x = 0, y = 0, /, a = 1 , b = 1 , * , c  = 1 ):
+def custom_equation(x = 0, y = 0, /, a = 1 , b = 1 , * , c  = 1 ) -> float :
     """
     This function raises x to the power of a, 
     adds y to the power of b, 
@@ -20,7 +20,7 @@ def custom_equation(x = 0, y = 0, /, a = 1 , b = 1 , * , c  = 1 ):
     return float((x**a + y **b ) / c)
 
 
-def fn_w_counter():
+def fn_w_counter() -> tuple :
     caller_count = defaultdict(int)
     total_calls = 0
     
