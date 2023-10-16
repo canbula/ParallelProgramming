@@ -1,0 +1,4 @@
+my_int = 7
+my_float = 21.37
+my_bool = False
+my_complex = (21, 37)
