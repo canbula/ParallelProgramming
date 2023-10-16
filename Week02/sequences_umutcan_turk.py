@@ -16,8 +16,6 @@ def remove_duplicates(list):
             new_list.append(key)
     return new_list
 
-print(remove_duplicates(my_list))
-
 def list_counts(list):
     counts_dict = {}
     for item in list:
@@ -27,12 +25,9 @@ def list_counts(list):
             counts_dict[item] = 1
     return counts_dict
 
-print(list_counts(my_list))
-    
-def reverse_dictionary(my_dict):
+def reverse_dict(my_dict):
     reversed_dict = {}
     for key, value in my_dict.items():
         reversed_dict[value] = key
     return reversed_dict
 
-print(reverse_dictionary(my_dict))
