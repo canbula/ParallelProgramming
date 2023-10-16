@@ -29,8 +29,9 @@ def custom_function(x = 0, y = 0, /, a = 1, b = 1, *, c = 1) -> float:
 
         def inner_function():
           nonlocal total_calls
-          caller_name[caller_name] +=1
+          caller_name = inspect.stack()[1].frame.f.globals['__name__']
+          caller_count[caller_name] +=1
           total_name +=1
-          return inner_function
+          return total_calls, caller_count
 
-return fn_w_counter
+return inner_function
