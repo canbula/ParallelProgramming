@@ -15,7 +15,7 @@ def custom_equation(x = 0, y = 0, /, a = 1 , b = 1 , * , c  = 1 ):
     :param a : Third Number 
     :param b : Fourth Number 
     :param c : Fifth Number 
-    
+    :return: x to the power of a, adds y to the power of b, then divides this sum by c
     """
     return float((x**a + y **b ) / c)
 
