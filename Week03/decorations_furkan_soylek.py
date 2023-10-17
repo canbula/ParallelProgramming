@@ -5,11 +5,11 @@ def performance(func):
             _performance.counter=1
             _performance.total_time=0
             _performance.totam_mem=0
-        time1=time.time()
+        time1=time.perf_counter()
         tracemalloc.start()
         func()
         _performance.total_mem+=tracemalloc.get_traced_memory()[1]
-        _performance.total_time+=time.time()-time1
+        _performance.total_time+=time.perf_counter()-time1
     return _performance()
 
 
