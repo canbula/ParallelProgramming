@@ -6,7 +6,7 @@ def performance(fn):
     if not hasattr(performance, "total_mem"):
          performance.total_mem = 0
 
-    def _performance(*args, **kwargs):
+    def _fn(*args, **kwargs):
         performance.counter += 1
 
         tracemalloc.start()
@@ -23,4 +23,4 @@ def performance(fn):
         performance.total_mem += memory
         return value
 
-    return _performance
+    return _fn
