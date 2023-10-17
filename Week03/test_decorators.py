@@ -40,5 +40,5 @@ def test_performance():
         dummy_memory(1000000)
         assert eval(f[:-3]).performance.counter == 5, \
             "performance is not working in " + f[:-3] + " (counter)"
-        assert eval(f[:-3]).performance.total_mem > 0, \
+        assert eval(f[:-3]).performance.total_mem > 8.e6, \
             "performance is not working in " + f[:-3] + " (total_mem)"
