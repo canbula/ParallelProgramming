@@ -4,7 +4,7 @@ import inspect
 custom_power = (lambda x=0, /, e=1 : x**e)
 
 
-def custom_function(x = 0, y = 0, /, a = 1, b = 1, *, c = 1) -> float:
+def custom_equation(x = 0, y = 0, /, a = 1, b = 1, *, c = 1) -> float:
     """
     Compute the result of the expression: (x**a + y**b) / c).
 
@@ -24,15 +24,15 @@ def custom_function(x = 0, y = 0, /, a = 1, b = 1, *, c = 1) -> float:
     return float((x ** a + y ** b) / c)
 
 
-    def fn_w_counter():
-        caller_count = defaultdict(int)
-        total_calls = 0
+def fn_w_counter():
+    caller_count = defaultdict(int)
+    total_calls = 0
 
-        def inner_function():
-            nonlocal total_calls
-            caller_name = inspect.stack()[1].frame.f.globals['__name__']
-            caller_count[caller_name] +=1
-            total_calls +=1
-            return total_calls, caller_count
+    def inner_function():
+        nonlocal total_calls
+        caller_name = inspect.stack()[1].frame.f.globals['__name__']
+        caller_count[caller_name] +=1
+        total_calls +=1
+        return total_calls, caller_count
 
-        return inner_function
+    return inner_function
