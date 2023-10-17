@@ -33,6 +33,7 @@ def fn_w_counter() -> (int, dict[str, int]):
         caller_name = inspect.stack()[1].frame.f.globals['__name__']
         caller_count[caller_name] +=1
         total_calls +=1
-        return total_calls, caller_count
+        
 
+    inner_function()
     return inner_function
