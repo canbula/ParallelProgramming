@@ -1,4 +1,4 @@
-from time import time_ns
+from time import perf_counter
 import tracemalloc
 
 def performance(fn):
@@ -13,11 +13,11 @@ def performance(fn):
         performance.counter += 1
 
         tracemalloc.start()
-        before_time = time_ns()
+        before_time = perf_counter()
 
         ret_value = fn(*args, **kwargs)
 
-        after_time = time_ns()
+        after_time = perf_counter()
         max_mem = tracemalloc.get_traced_memory()[1]
         tracemalloc.stop()
         d_time = after_time - before_time
