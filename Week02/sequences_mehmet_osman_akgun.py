@@ -21,5 +21,4 @@ def list_counts(moaList: list) -> dict:
 def reverse_dict(input_moa: dict) -> dict:
     reversed_dict = {element: key for key, element in input_moa.items()}
     return reversed_dict
-reversed_result = reverse_dict(my_dict)
-print(reversed_result)
+
