@@ -15,7 +15,7 @@ def performance(x):
         performance.counter += 1
 
         tracemalloc.start()
-        firs_time = perf_counter()
+        first_time = perf_counter()
 
         value = x(*args, **kwargs)
 
