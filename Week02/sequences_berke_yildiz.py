@@ -4,7 +4,7 @@ my_set = {"A", 2, "B", 3, "C"}
 my_dict = {"A" : 3, "B" : 2, "C" : 1}
 
 def remove_duplicates(my_list):
-    return set(my_list)
+    return list(set(my_list))
 
 def list_counts(my_list):
     the_list = list(my_list)
