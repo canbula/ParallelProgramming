@@ -24,7 +24,9 @@ At the end of the every chapter, you will also find a Problem Set.
 Students are requested to submit their homeworks to folders WeekXX, as defined in the LectureNotes.pdf. 
 The codes will be subject to certain GitHub action workflows to be tested automatically.
 
-[![Week02 Homework](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-02.yml/badge.svg?branch=master)](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-02.yml) [![Week03 Homework](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-03.yml/badge.svg)](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-03.yml)
+Variable Types and Sequences<br>[![Week02 Homework](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-02.yml/badge.svg?branch=master)](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-02.yml)
+
+Functions and Decorators<br>[![Week03 Homework](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-03.yml/badge.svg)](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-03.yml)
 
 # Codes and Videos from Previous Years
 You can change the branch to see the codes from previous years. Also there is a YouTube playlist, 
