@@ -20,6 +20,12 @@ You can find the codes that written in the laboratory in the folder WeekXX.
 In the root folder there is a LectureNotes.pdf file, which is updated weekly after every lecture. 
 At the end of the every chapter, you will also find a Problem Set.
 
+# Homeworks
+Students are requested to submit their homeworks to folders WeekXX, as defined in the LectureNotes.pdf. 
+The codes will be subject to certain GitHub action workflows to be tested automatically.
+
+[![Week02 Homework](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-02.yml/badge.svg?branch=master)](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-02.yml) [![Week03 Homework](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-03.yml/badge.svg)](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-03.yml)
+
 # Codes and Videos from Previous Years
 You can change the branch to see the codes from previous years. Also there is a YouTube playlist, 
 which includes the supplementary videos for the course as given in 2021. The videos do not include 
