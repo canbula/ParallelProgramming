@@ -1,19 +1,15 @@
 import time
-import psutil
+import tracemalloc
 import os
-
-def process_memory():
-    process = psutil.Process(os.getpid())
-    mem_info = process.memory_info()
-    return mem_info.rss
 
 def performance(fn):
     def decorator(*args, **kwargs):
-        mem_before = process_memory()
+        tracemalloc.start()
         start_time = time.time()
         fn(*args, **kwargs)
         end_time = time.time()
-        mem_after = process_memory()
+        mem_used = tracemalloc.get_traced_memory()[0]
+        tracemalloc.stop()
 
         if not hasattr(performance, 'counter'):
             performance.counter = 0
@@ -22,5 +18,5 @@ def performance(fn):
 
         performance.counter += 1
         performance.total_time += end_time - start_time
-        performance.total_mem += mem_after - mem_before
+        performance.total_mem += mem_used
     return decorator
