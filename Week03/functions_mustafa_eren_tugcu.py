@@ -19,17 +19,19 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
     """
     return float((x**a + y **b ) / c)
 
-def fn_w_counter() -> Tuple[int, Dict[str, int]] :
-    caller_count = defaultdict(int)
-    total_calls = 0
-    
-    def _fn_w_counter(caller_name):
-        nonlocal total_calls
-        caller_name = __import__('inspect').currentframe().f_back.f_globals['__name__']
-        caller_count[caller_name] += 1
-        total_calls += 1
-        return total_calls, dict(caller_count)
-    
-    return _fn_w_counter
+ddef fn_w_counter() -> (int, dict[str, int]):
+    if not hasattr(fn_w_counter, "call_counter"):
+        fn_w_counter.call_counter = 0
+        fn_w_counter.caller_counts = {}
+
+    caller_name = __name__
+    fn_w_counter.call_counter += 1
+
+    if caller_name in fn_w_counter.caller_counts:
+        fn_w_counter.caller_counts[caller_name] += 1
+    else:
+        fn_w_counter.caller_counts[caller_name] = 1
+
+    return fn_w_counter.call_counter, fn_w_counter.caller_counts
 
     
