@@ -9,9 +9,9 @@ my_dict = {
     "headset":120
 }
 
-def remove_duplicates(listParam):
+def remove_duplicates(list_instance):
     new_list = []
-    for key in listParam:
+    for key in list_instance:
         if key not in new_list:
             new_list.append(key)
     return new_list
