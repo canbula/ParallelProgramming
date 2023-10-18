@@ -1,30 +1,28 @@
 import time
-import sys
+import tracemalloc
+
 
 def performance(function):
     def _performance(*args, **kwargs):
         if not hasattr(_performance, "counter"):
             _performance.counter = 0
-            _performance.total_time = 0.0
+            _performance.total_time = 0
             _performance.total_mem = 0
 
         _performance.counter += 1
 
         started_time = time.perf_counter()
 
-        started_memory = sys.getsizeof(args) + sys.getsizeof(kwargs) + sys.getsizeof(function.__globals__)
+        tracemalloc.start()
 
         function_result = function(*args, **kwargs)
 
         ended_time = time.perf_counter()
 
-        ended_mem = sys.getsizeof(args) + sys.getsizeof(kwargs) + sys.getsizeof(function.__globals__)
-
         execution_time = ended_time - started_time
-        memory_used = ended_mem - started_memory
 
         _performance.total_time += execution_time
-        _performance.total_mem += memory_used
+        _performance.total_mem += tracemalloc.get_traced_memory()[1]
 
         return function_result
 
