@@ -1,14 +1,13 @@
-import time
 import tracemalloc
-import os
+import time
 
 def performance(fn):
     def decorator(*args, **kwargs):
         tracemalloc.start()
-        start_time = time.time()
+        start_time = time.perf_counter()
         fn(*args, **kwargs)
-        end_time = time.time()
-        mem_used = tracemalloc.get_traced_memory()[0]
+        end_time = time.perf_counter()
+        mem_used = tracemalloc.get_traced_memory()[1]
         tracemalloc.stop()
 
         if not hasattr(performance, 'counter'):
