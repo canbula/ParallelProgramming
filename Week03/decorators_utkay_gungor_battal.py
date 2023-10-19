@@ -24,10 +24,10 @@ def performance(fn):
       tracemalloc.stop()
       d_time = finish_time - start_time
 
-      perfomance.total_time += d_time
+      performance.total_time += d_time
       performance.total_mem += max_mem
       return value
 
-return _fn
+    return _fn
       
       
