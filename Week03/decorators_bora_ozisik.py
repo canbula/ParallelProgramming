@@ -4,12 +4,12 @@ import tracemalloc
 
 def performance(function):
     def _performance(*args, **kwargs):
-        if not hasattr(_performance, "counter"):
-            _performance.counter = 0
-            _performance.total_time = 0
-            _performance.total_mem = 0
+        if not hasattr(performance, "counter"):
+            performance.counter = 0
+            performance.total_time = 0
+            performance.total_mem = 0
 
-        _performance.counter += 1
+        performance.counter += 1
 
         started_time = time.perf_counter()
 
@@ -21,8 +21,8 @@ def performance(function):
 
         execution_time = ended_time - started_time
 
-        _performance.total_time += execution_time
-        _performance.total_mem += tracemalloc.get_traced_memory()[1]
+        performance.total_time += execution_time
+        performance.total_mem += tracemalloc.get_traced_memory()[1]
 
         return function_result
 
@@ -53,6 +53,7 @@ def function_will_be_measured():
 for i in range(9):
     function_will_be_measured()
 
-print("Total function calls:", function_will_be_measured.counter)
-print(f"Total execution time is {function_will_be_measured.total_time} seconds")
-print("Total memory used:",format_memory( function_will_be_measured.total_mem))
+
+print("Total function calls:", performance.counter)
+print(f"Total execution time is {performance.total_time} seconds")
+print("Total memory used:",format_memory(performance.total_mem))
