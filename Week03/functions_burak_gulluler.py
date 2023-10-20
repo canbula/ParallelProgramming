@@ -18,7 +18,7 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
 call_counter = 0
 call_counts = {}
 
-def fn_w_counter():
+def fn_w_counter() -> (int, dict[str, int]):
     global call_counter
     call_counter += 1
 
