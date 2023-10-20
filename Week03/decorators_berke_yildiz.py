@@ -11,7 +11,7 @@ def performance(fn):
             tracemalloc.start()
             fn(*args,**kwargs)
             end_time = time.time()
-            performance.total_mem += tracemalloc.get_traced_memory()
+            performance.total_mem += tracemalloc.get_traced_memory()[1]
             tracemalloc.stop()
             exec_time = round(end_time - start_time,ndigits=4)
             performance.total_time += exec_time
