@@ -28,32 +28,3 @@ def performance(function):
 
     return _performance
 
-def format_memory(memory_bytes):
-    """
-        This function takes memory value as bytes
-        and converts it to kilobits or megabits.
-
-        :param memory_bytes: First param.
-        :type memory_bytes: int
-        :return: kilobits or megabits.
-    """
-
-    if memory_bytes < 8:
-        return f"{memory_bytes} b"
-    elif memory_bytes < 8 * 1024:
-        return f"{memory_bytes / 8:.2f} Kb"
-    else:
-        return f"{memory_bytes / (8 * 1024):.2f} Mb"
-
-
-@performance
-def function_will_be_measured():
-    print('My name is Bora')
-
-for i in range(9):
-    function_will_be_measured()
-
-
-print("Total function calls:", performance.counter)
-print(f"Total execution time is {performance.total_time} seconds")
-print("Total memory used:",format_memory(performance.total_mem))
