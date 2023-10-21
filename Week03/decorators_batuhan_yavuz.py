@@ -5,7 +5,7 @@ def performance(func):
             performance.counter = 0
             performance.total_time = 0
             performance.total_mem = 0
-
+            
         performance.counter +=1
         start = time.time()
         tracemalloc.start()
