@@ -23,12 +23,12 @@ def fn_w_counter()->(int,dict[str,int]):
     it counts that how many calls this function anywhere
     :return: (calling number, {the function name : calling number})
     """
-
+    caller_name = globals()['__name__']
     if not hasattr(fn_w_counter,"counter"):
         fn_w_counter.counter = 0
         fn_w_counter.caller_info = {}
     fn_w_counter.counter += 1
-    caller_name = __name__
+    
 
     if caller_name in fn_w_counter.caller_info:
         fn_w_counter.caller_info[caller_name] += 1
