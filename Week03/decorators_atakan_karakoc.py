@@ -21,12 +21,12 @@ def performance(func):
         performance.counter += 1
         
         func(*args, **kwargs)
-        
         end_time = time.perf_counter()
-        tracemalloc.stop()
         mem_usage = tracemalloc.get_traced_memory()
-        
         performance.total_mem += mem_usage[1]
+        
+        tracemalloc.stop()
+        
         performance.total_time += (end_time - start_time)
         
     return _performance
