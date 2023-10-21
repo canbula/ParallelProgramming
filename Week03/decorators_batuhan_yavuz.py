@@ -9,7 +9,7 @@ def performance(func):
         performance.counter +=1
         start = time.time()
         tracemalloc.start()
-        func()
+        func(*args,**kwargs)
         performance.total_mem = tracemalloc.get_traced_memory()[1]
         performance.total_time = time.time()-start
 
