@@ -34,4 +34,4 @@ def fn_w_counter()->(int,dict[str,int]):
         fn_w_counter.caller_info[caller_name] += 1
     else:
         fn_w_counter.caller_info[caller_name] = 1
-    return (fn_w_counter.counter, fn_w_counter.caller_info)
+    return fn_w_counter.counter, fn_w_counter.caller_info
