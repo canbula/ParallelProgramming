@@ -6,7 +6,7 @@ this function take a power of a number
 :return: takes a power(e) of a number(x)
 """
 
-def custom_equation(x = 0,y = 0,/,a = 1,b = 1,*,c =1) -> float:
+def custom_equation(x: int = 0,y: int = 0,/,a: int = 1,b: int = 1,*,c: int =1) -> float:
     """
     making custom equation
     :param x: position-only with default value 0
