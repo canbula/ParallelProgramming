@@ -33,9 +33,7 @@ def fn_w_counter() -> (int, dict[str, int]):
         fn_w_counter.caller[caller_name] += 1
     else:
         fn_w_counter.caller[caller_name] = 1
-    return print(fn_w_counter.call_count, fn_w_counter.caller)
+    return fn_w_counter.call_count, fn_w_counter.caller
 
-for i in range(10):
-    fn_w_counter()
 
 
