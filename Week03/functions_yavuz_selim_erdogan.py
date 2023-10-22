@@ -2,7 +2,7 @@
 custom_power = lambda x = 0 , / , e = 1 : x**e
 
 
-def custom_equation(x:int=0, y:int=0 , / ,a:int=1,b:int=1,*,c:int=1):
+def custom_equation(x:int=0, y:int=0 , / ,a:int=1,b:int=1,*,c:int=1) -> float:
     """
     This function takes the power of two numbers and divides their sum by a number.
     :param x: First number
@@ -12,7 +12,7 @@ def custom_equation(x:int=0, y:int=0 , / ,a:int=1,b:int=1,*,c:int=1):
     :param c: Fifth number
     :return (x**a+y**b)/c
     """
-    return float(x**a+y**b)/c
+    return (x**a+y**b)/c
 
 
 
