@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+p {
+    font-size: 12px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #2196f3;
+}
+
+a:hover {
+    color: #f32145;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.task-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.task {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px 10px 20px 50px;
+    background-color: #2196f3;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    color: #dcdcdc;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    border-radius: 5px;
+}
+
+.task img {
+    position: absolute;
+    top: 5px;
+    left: 55px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.time {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background-color: #555555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px;
+}
+
+.prerequisites {
+    position: absolute;
+    bottom: 0px;
+    left: 50px;
+    width: 400px;
+    height: 20px;
+    background-color: #c5c4c1;
+    color: #f32145;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.task-id {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background-color: #f32145;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0;
+}
+
+.task-id input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #dcdcdc;
+}
+
+.task-id input:focus {
+    outline: none;
+}
+
+.result-container {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.result-container img.cooking-time {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.result-container div.result {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 470px;
+    height: 50px;
+    color: #f32145;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.result-container div.error {
+    position: relative;
+    width: 480px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #f32145;
+    color: #dcdcdc;
+    margin: 10px;
+}
