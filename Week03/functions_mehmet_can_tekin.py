@@ -13,14 +13,14 @@ def custom_equation(x = 0, y = 0 , / , a = 1 , b = 1 , * ,c =1 ):
     return (x**a + y**b )/c
 
 
-def fn_w_counter() -> (int, {str, int}):
-    if not hasattr(fn_w_counter, "count"):
-        fn_w_counter.count = 0
+def fn_w_counter() -> (int, dict[str, int]):
+    if not hasattr(fn_w_counter, "call_count"):
+        fn_w_counter.call_count = 0
         fn_w_counter._dict = {}
     caller_name = __name__
-    fn_w_counter.count += 1
+    fn_w_counter.call_count += 1
     if caller_name in fn_w_counter._dict:
         fn_w_counter._dict[caller_name] += 1
     else:
         fn_w_counter._dict[caller_name] = 1
-    return fn_w_counter.count, fn_w_counter._dict
+    return fn_w_counter.call_count, fn_w_counter._dict
