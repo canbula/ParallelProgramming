@@ -1,0 +1,27 @@
+import time
+import tracemalloc
+
+def performance(func):
+    def decorators_(*args,**kwargs):
+        tracemalloc.start()
+        start_time = time.perf_counter()
+        result = func(*args,**kwargs)
+        end_time = time.perf_counter()
+        memory = tracemalloc.get_traced_memory()[1]
+        
+        if not hasattr(performance, "counter"):
+            performance.counter = 0
+        if not hasattr(performance, "total_t"):
+            performance.total_t = 0
+        if not hasattr(performance, "total_m"):
+            performance.total_m = 0
+        
+        performance.counter += 1
+        performance.total_t += end_time - start_time
+        performance.total_m += memory
+        
+        print(f"Counter: {performance.counter} Total time: {performance.total_t} Total memory: {performance.total_m}")
+        
+        return result
+    
+    return decorators_
