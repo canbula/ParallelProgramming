@@ -22,4 +22,4 @@ def performance(func):
 
 
 
-    return wrapped_function()
+    return wrapped_function
