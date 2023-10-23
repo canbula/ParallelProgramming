@@ -1,6 +1,6 @@
 import asyncio
 
-def coroutine(function):
+def awaitme(function):
     async def _function(*args, **kwargs):
         """
         This async function is intended to 
