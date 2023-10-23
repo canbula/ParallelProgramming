@@ -1,6 +1,6 @@
 import asyncio
 
-def coroutine_decorator(func):
+def awaitme(func):
     async def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
         if asyncio.iscoroutine(result):
