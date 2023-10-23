@@ -18,7 +18,7 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
 
 def fn_w_counter() -> (int, dict[str, int]):
     # Get the caller's name
-    caller = fn_w_counter.__name__
+    caller = globals()['__name__']
 
     # Initialize counters if they don't exist
     if not hasattr(fn_w_counter, 'call_counter'):
