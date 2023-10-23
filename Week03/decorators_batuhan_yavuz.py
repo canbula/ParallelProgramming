@@ -14,6 +14,6 @@ def performance(func):
         execution_time = start - end
         performance.total_mem = tracemalloc.get_traced_memory()[1]
         performance.total_time = execution_time
-        return reseult
+        return result
 
     return  wrapper
