@@ -1,7 +1,4 @@
 import os
-import inspect
-import time
-import random
 import asyncio
 
 
@@ -23,4 +20,31 @@ def test_awaitable():
         @eval(f[:-3]).awaitme
         def dummy_awaitable():
             return 1
+        @eval(f[:-3]).awaitme
+        def dummy_function(x: int = 0, y: int = 0) -> int:
+            return x + y
+        @eval(f[:-3]).awaitme
+        def another_dummy_function(s: str = "") -> str:
+            return s.capitalize()
+        @eval(f[:-3]).awaitme
+        def dummy_tuple_return() -> tuple:
+            return 1, 2, 3
         assert asyncio.iscoroutinefunction(dummy_awaitable), "awaitme is not awaitable in " + f[:-3]
+        assert asyncio.iscoroutinefunction(dummy_function), "awaitme is not awaitable in " + f[:-3]
+        async def just_a_tester():
+            result = await dummy_awaitable()
+            assert result == 1, "awaitme is not returning the correct value in " + f[:-3]
+            result = await dummy_function(1, 2)
+            assert result == 3, "awaitme is not returning the correct value in " + f[:-3]
+            result = await another_dummy_function("bora")
+            assert result == "Bora", "awaitme is not returning the correct value in " + f[:-3]
+            result = await dummy_tuple_return()
+            assert result == (1, 2, 3), "awaitme is not returning the correct value in " + f[:-3]
+        asyncio.run(just_a_tester())
+
+
+if __name__ == "__main__":
+    test_names()
+    test_callables()
+    test_awaitable()
+    print("Everything passed")
