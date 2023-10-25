@@ -28,5 +28,3 @@ def reverse_dict(dict):
     
     for i in dict:
         reversed_dict[dict[i]] = i
-
-    print(reversed_dict)
