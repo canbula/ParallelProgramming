@@ -28,3 +28,4 @@ def reverse_dict(dict):
     
     for i in dict:
         reversed_dict[dict[i]] = i
+    return reverse_dict
