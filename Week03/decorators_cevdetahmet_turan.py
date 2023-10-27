@@ -1,8 +1,6 @@
 import tracemalloc
 import time
 
-#print(dir(tracemalloc))
-
 def performance(fn): 
     def wrapped_function(*args, **kwargs):  
         tracemalloc.start()  
@@ -22,17 +20,3 @@ def performance(fn):
         return result 
 
     return wrapped_function  
-
-# Sample function decorated with 'performance'
-@performance
-def example_function(n):
-    result = 0
-    for i in range(1, n + 1):
-        result += i
-    return result
-
-result = example_function(1000000)
-
-print("Function Calls:", performance.counter)
-print("Total Time:", performance.total_time, "seconds")
-print("Total Memory:", performance.total_mem, "bytes")
