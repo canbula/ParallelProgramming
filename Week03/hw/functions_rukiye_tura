@@ -1,0 +1,29 @@
+custom_power = lambda x=0, /, e=1: x ** e
+
+def custom_equation(x=0, y=0, /, a=1, b=1, *, c=1) -> float:
+   """
+   This funcion calculates the operation (x**a + y**b) /c
+
+   :param x: First number
+   :param y: Second number
+   :param a: Power of the First number
+   :param b: Power of the Second number
+   :param c: Third number
+   :return: The output of the operation
+   """
+   return float((x ** a + y ** b) / c)
+
+def fn_w_counter() -> (int, dict[str, int]):
+    if not hasattr(fn_w_counter, "call_counter"):
+        fn_w_counter.call_counter = 0
+        fn_w_counter.caller_counts = {}
+
+    caller_name = __name__
+    fn_w_counter.call_counter += 1
+
+    if caller_name in fn_w_counter.caller_counts:
+        fn_w_counter.caller_counts[caller_name] += 1
+    else:
+        fn_w_counter.caller_counts[caller_name] = 1
+
+    return fn_w_counter.call_counter, fn_w_counter.caller_counts
