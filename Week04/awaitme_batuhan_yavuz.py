@@ -2,7 +2,7 @@ import asyncio
 
 def awaitme(func):
     async def wrapper(*args, **kwargs):
-        if inspect.iscoroutinefunction(func):
+        if asyncio.iscoroutinefunction(func):
             return await func(*args,**kwargs)
         else:
             return func(*args,**kwargs)
