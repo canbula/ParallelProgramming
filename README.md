@@ -1,3 +1,7 @@
+# Live Link
+https://prod.liveshare.vsengsaas.visualstudio.com/join?9B24D309D5B6FFFF8B00B653CB1AD106F981
+
+
 # Parallel Programming 2023
 Repository for Parallel Programming course given by Assoc. Prof. Dr. Bora Canbula 
 at Computer Engineering Department of Manisa Celal Bayar University.
