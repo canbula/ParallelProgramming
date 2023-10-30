@@ -1,5 +1,5 @@
 # Live Link
-https://prod.liveshare.vsengsaas.visualstudio.com/join?9B24D309D5B6FFFF8B00B653CB1AD106F981
+https://prod.liveshare.vsengsaas.visualstudio.com/join?693125A2D249A6971EBDCBF9ACAB8567A936
 
 
 # Parallel Programming 2023
