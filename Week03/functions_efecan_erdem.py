@@ -10,6 +10,7 @@ def custom_equation(x: int = 0, y:int= 0, /, a:int=1, b:int=1, *, c:int= 1) -> f
     :param b: Second exponent (default: 1)
     :param c: Divisor, keyword-only (default: 1)
     :return: (x**a + y**b) / c  -> float
+    
     """
     return float((x**a + y**b) / c)
 
