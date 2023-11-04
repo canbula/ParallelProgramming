@@ -1,38 +1,52 @@
-def find_unique_elements(input_list: list) -> list:
-    return list(set(input_list))
+my_list = [35, 45, 16, 34, 34]
 
-def count_element_occurrences(input_list: list) -> dict:
-    element_counts = {}
-    
-    for element in input_list:
-        if element in element_counts:
-            element_counts[element] += 1
-        else:
-            element_counts[element] = 1
-    
-    return element_counts
+my_tuple = ("leo", "ronaldo","drogba","drogba")
 
-def reverse_dict(input_dict: dict) -> dict:
-    reversed_dict = {}
+my_set = ("banana","true","1")
 
-    for key, value in input_dict.items():
-        reversed_dict[value] = key
-    
-    return reversed_dict
-
-my_list = [10, "Different List", 52.600, True, 23 + 5j]
-my_tuple = ("M", "Fabulous", "List")
-my_set = {True, 1}
 my_dict = {
-    "full_name": "MEHMETANIL",
-    "nickname": "KraLex",
-    "age": 24
+    "name": "mehmet",
+    "nickname": "kralex",
+    "dateOfBirth": "2000"
 }
 
-unique_list = find_unique_elements(my_list)
-occurrences = count_element_occurrences(my_list)
-reversed_dict = reverse_dict(my_dict)
 
-print("Unique Elements:", unique_list)
-print("Element Occurrences:", occurrences)
-print("Reversed Dictionary:", reversed_dict)
+def remove_dublicates_list (my_tuple):
+
+    unique_list = []
+
+    for item in my_tuple:
+        if item not in unique_list:
+            unique_list.append(item)
+
+    return unique_list
+
+result = remove_dublicates_list(my_tuple)
+print(result)
+
+
+
+
+
+my_input_list = [4, 4, 4, 4, 5, 5, 6, 7, 7]
+
+def list_counts(my_input_list):
+    counts = {}  # Create an empty dictionary to store the counts
+
+    for item in my_input_list:
+        if item in counts:
+            counts[item] += 1
+        else:
+            counts[item] = 1
+
+    return counts
+
+result_1 = list_counts(my_input_list)
+print(result_1)
+
+def reverse_dict(my_dict):
+    reversed_dict = {value: key for key, value in my_dict.items()}
+    return reversed_dict
+
+result_2 = reverse_dict(my_dict)
+print(result_2)
