@@ -1,6 +1,9 @@
 import random
 
-def next_pi(n):
+def next_pi():
+
+    n = 1000
+    
     points_in_circle = 0
     points_in_total = 0
 
