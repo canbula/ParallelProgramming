@@ -2,7 +2,7 @@ import random
 
 
 def next_pi(): 
-    n = int(input("Enter the number of points: "))
+    n = 100
     i  = 0 
 
     for _ in range(n): 
@@ -15,3 +15,5 @@ def next_pi():
             i += 1 
         
         pi = 4 * i / n 
+        
+        yield pi 
