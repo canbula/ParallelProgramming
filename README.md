@@ -30,6 +30,8 @@ Functions and Decorators<br>[![Week03 Homework](https://github.com/canbula/Paral
 
 Coroutines<br>[![Week04 Homework](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-04.yml/badge.svg)](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-04.yml)
 
+Monte Carlo Pi Estimator as a Generator<br>[![Week06 Homework](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-06.yml/badge.svg)](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-06.yml)
+
 # Codes and Videos from Previous Years
 You can change the branch to see the codes from previous years. Also there is a YouTube playlist, 
 which includes the supplementary videos for the course as given in 2021. The videos do not include 
