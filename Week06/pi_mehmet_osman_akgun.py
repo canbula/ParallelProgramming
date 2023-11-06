@@ -18,7 +18,7 @@ def Generator():
         yield estimated_pi, total
 
 def next_pi():
-    return next()
+    return next_pi()
 
 pi_generator = Generator()
 
