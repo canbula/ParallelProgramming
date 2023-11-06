@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import random
 
 
 files = [f for f in os.listdir(os.path.dirname(__file__)) if f.startswith("pi")]
@@ -26,6 +27,7 @@ def test_generators():
 def test_approaching():
     for f in files:
         np.random.seed(7)
+        random.seed(7)
         gen = eval(f[:-3]).next_pi()
         pi_estimate = next(gen)
         for _ in range(1000):
