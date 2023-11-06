@@ -20,5 +20,4 @@ def Generator():
 def next_pi():
     return next_pi()
 
-pi_generator = Generator()
 
