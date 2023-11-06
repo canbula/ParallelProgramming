@@ -17,8 +17,8 @@ def Generator():
         estimated_pi = (inner / total) * 4
         yield estimated_pi, total
 
-def next_pi(pi_gen):
-    return next(pi_gen)
+def next_pi():
+    return next()
 
 pi_generator = Generator()
 
