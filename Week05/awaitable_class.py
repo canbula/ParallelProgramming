@@ -2,25 +2,25 @@ import asyncio
 
 
 async def my_coroutine():
-    print(f"Starting coroutine")
-    await asyncio.sleep(1)
-    print(f"Ending coroutine")
+    print("Starting coroutine")
+    await asyncio.sleep(0)
+    print("Ending coroutine")
 
 
 class AwaitableClass:
     def __await__(self):
-        print("Awaitable class starting")
+        print("Awaiting")
         yield
-        print("Awaitable class ending")
+        print("Done")
 
 
 async def main():
-    print(f"Starting main")
+    print("Starting main")
     await my_coroutine()
     await AwaitableClass()
     awaitable_object = AwaitableClass()
     await awaitable_object
-    print(f"Ending main")
+    print("Ending main")
 
 
 if __name__ == "__main__":

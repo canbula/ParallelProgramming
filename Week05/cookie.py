@@ -1,6 +1,7 @@
 import asyncio
 import time
 import logging
+from typing import Any
 
 
 class CompletedTaskError(Exception):
@@ -16,7 +17,7 @@ class ChefOccupiedError(Exception):
 
 
 class ChocolateChipCookie:
-    def __init__(self, minute: float = 1.0):
+    def __init__(self, minute: float = 1.0) -> None:
         self._minute = minute
         self.__start_time = time.time()
         self.__end_time = None
@@ -110,8 +111,7 @@ class ChocolateChipCookie:
         if not self.__tasks["bake_the_cookies"]["completed"]:
             logging.error("The cookies are not baked")
         logging.info(
-            f"It took {((self.__end_time - self.__start_time) / self._minute):.2f} "
-            f"minutes to complete this recipe."
+            f"It took {((self.__end_time - self.__start_time) / self._minute):.2f} minutes to complete this recipe."
         )
         return True
 
@@ -140,7 +140,7 @@ class ChocolateChipCookie:
             await asyncio.sleep(0)
             return None
         except ChefOccupiedError:
-            logging.warning(f"The chef is not avaiable for {task}")
+            logging.warning(f"The chef is not available for {task}")
             await asyncio.sleep(0)
             return None
         finally:
