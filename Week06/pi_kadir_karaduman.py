@@ -18,3 +18,5 @@ def next_pi():
         points_in_total += 1
 
         yield 4 * points_in_circle / points_in_total
+
+    raise StopIteration
