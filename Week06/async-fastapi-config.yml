@@ -1,0 +1,19 @@
+config:
+  target: 'http://127.0.0.1:3001'
+  phases:
+    - duration: 60
+      arrivalRate: 40
+scenarios:
+  - flow:
+      - post:
+          url: '/courses'
+          json:
+            title: 'Parallel Programming'
+            description: 'Asynchronous, Multi-Thread, Multi-Process Programming with Python'
+            instructor: 'Assoc. Prof. Dr. Bora Canbula'
+          capture:
+            - json: $.id
+              as: user_id
+      - get:
+          url: '/courses'
+
