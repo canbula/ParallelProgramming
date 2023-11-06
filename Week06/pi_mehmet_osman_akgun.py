@@ -4,7 +4,7 @@ def Generator():
     inner = 0
     total = 0
 
-    while True:
+    while total < 1000:
         x = random.uniform(-1, 1)
         y = random.uniform(-1, 1)
         total += 1
