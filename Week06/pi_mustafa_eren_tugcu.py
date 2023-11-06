@@ -1,7 +1,7 @@
 import random 
 
 def next_pi(): 
-    n = 1000
+    n = 100
     i = 0 
     
     while True: 
