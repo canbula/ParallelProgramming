@@ -10,6 +10,6 @@ def next_pi():
             inner += 1
         outer += 1
         pi = 4 * (inner / outer)
-        yield pi,inner,outer
+        yield pi
       
-gen = next_pi()
+
