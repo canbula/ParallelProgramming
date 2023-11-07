@@ -1,10 +1,10 @@
 import random
 
-def next_pi(n):
+def next_pi():
     points_in_circle = 0
     points_in_total = 0
 
-    for _ in range(n):
+    while True:
         x = random.uniform(0,1)
         y = random.uniform(0,1)
 
