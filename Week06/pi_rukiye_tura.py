@@ -1,6 +1,6 @@
 import random
 
-def generator(total):
+def next_pi(total):
     points_in_circle = 0
 
     for i in range(total):
