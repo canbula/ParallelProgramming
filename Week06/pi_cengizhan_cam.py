@@ -5,8 +5,8 @@ def next_pi() :
     total_num=0
 
     while True :
-        x=random.uniform(-1,1)
-        y=random.uniform(-1,1)
+        x=random.random()
+        y=random.random()
 
         if x**2 + y**2 <= 1 :
             num_in +=1
