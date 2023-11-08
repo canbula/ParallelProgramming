@@ -4,7 +4,7 @@ def next_pi() :
     num_in=0
     total_num=0
 
-    while true :
+    while True :
         x=random.uniform(-1,1)
         y=random.uniform(-1,1)
 
