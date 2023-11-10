@@ -8,7 +8,7 @@ def next_pi() -> None:
             inner += 1
         outter += 1
 
-        phi = 4 * (inner / outter)
+        pi = 4 * (inner / outter)
         yield pi
 
 
