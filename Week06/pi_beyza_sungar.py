@@ -14,5 +14,4 @@ def next_pi():
         pi = 4 * (inner_points / total_points)
         yield pi
 
-generator = next_pi()
-iterator = iter(generator)
+
