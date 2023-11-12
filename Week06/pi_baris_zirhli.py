@@ -1,14 +1,14 @@
 import random
 
 def next_pi() -> None:
-    inner, outter = 0, 0
+    inner, outer = 0, 0
     while True:
         randomX, randomY = random.random(), random.random()
         if randomX**2 + randomY**2 <= 1:
             inner += 1
-        outter += 1
+        outer += 1
 
-        pi = 4 * (inner / outter)
+        pi = 4 * (inner / outer)
         yield pi
 
 
