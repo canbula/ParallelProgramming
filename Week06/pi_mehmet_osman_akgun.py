@@ -4,7 +4,7 @@ def next_pi():
     inner = 0
     total = 0
 
-    while total < 10:
+    while True:
         x = random.uniform(-1, 1)
         y = random.uniform(-1, 1)
         total += 1
