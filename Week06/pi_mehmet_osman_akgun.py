@@ -1,6 +1,6 @@
 import random
 
-def Generator():
+def next_pi():
     inner = 0
     total = 0
 
@@ -17,7 +17,6 @@ def Generator():
         estimated_pi = (inner / total) * 4
         yield estimated_pi, total
 
-def next_pi():
-    return next_pi()
+
 
 
