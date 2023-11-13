@@ -15,7 +15,7 @@ def next_pi():
             inner += 1
 
         estimated_pi = (inner / total) * 4
-        yield estimated_pi, total
+        yield estimated_pi
 
 
 
