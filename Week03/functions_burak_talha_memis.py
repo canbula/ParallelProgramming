@@ -12,7 +12,7 @@ def custom_equation(x: int = 0, y: int = 0 ,/,a: int = 1,b: int = 1 ,*, c: int =
     :param c: fifth integer with default value 1 (keyword-only)
     :raises TypeError: if x, y, a, b or c is not an integer
     """
-      if not isinstance(x, int):
+    if not isinstance(x, int):
         raise TypeError("x must be an integer")
     if not isinstance(y, int):
         raise TypeError("y must be an integer")
