@@ -1,7 +1,7 @@
 import time
 import tracemalloc
 
-def decorator(func):
+def performance(func):
     def wrapper(*args, **kwargs):
         tracemalloc.start()
         start_time = time.perf_counter() 
@@ -9,22 +9,22 @@ def decorator(func):
         end_time = time.perf_counter()
         mem_used = tracemalloc.get_traced_memory()[1] 
 
-        if not hasattr(decorator, 'counter'):
-            decorator.counter = 0
-        if not hasattr(decorator, 'total_time'):
-            decorator.total_time = 0
-        if not hasattr(decorator, 'total_mem'):
-            decorator.total_mem = 0
+        if not hasattr(performance, 'counter'):
+            performance.counter = 0
+        if not hasattr(performance, 'total_time'):
+            performance.total_time = 0
+        if not hasattr(performance, 'total_mem'):
+            performance.total_mem = 0
 
-        decorator.counter += 1
-        decorator.total_time += end_time - start_time
-        decorator.total_mem += mem_used 
+        performance.counter += 1
+        performance.total_time += end_time - start_time
+        performance.total_mem += mem_used 
 
-        print(f"counter = {decorator.counter}, Total time = {decorator.total_time}, Total mem = {decorator.total_mem}")
+        print(f"counter = {performance.counter}, Total time = {performance.total_time}, Total mem = {performance.total_mem}")
         return func
     return wrapper
 '''
-@decorator
+@performance
 def example_function():
     print("Deneme")
 example_function() 
