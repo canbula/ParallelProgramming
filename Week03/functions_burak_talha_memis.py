@@ -22,15 +22,22 @@ def custom_equation(x: int = 0, y: int = 0 ,/,a: int = 1,b: int = 1 ,*, c: int =
         raise TypeError("b must be an integer")
     if not isinstance(c, int):
         raise TypeError("c must be an integer")
-    return(x ** a + y ** b) / c
+    return float(x ** a + y ** b) / c
 
 def fn_w_counter() -> (int, dict[str, int]):
     if not hasattr(fn_w_counter, 'counter'):
         fn_w_counter.counter = 0
     fn_w_counter.counter += 1
     if not hasattr(fn_w_counter, 'callers'):
-        fn_w_counter.callers = {f"{__name__}": 1}
+        fn_w_counter.callers = {f"{__name__}":1}
     else:
-        fn_w_counter.callers[__name__] += 1    
-    return fn_w_counter.counter, fn_w_counter.callers 
-
+        if __name__ in fn_w_counter.callers:
+            fn_w_counter.callers[__name__] +=1
+        else:
+            fn_w_counter.callers[__name__] =1
+    return  (fn_w_counter.counter, fn_w_counter.callers)
+'''
+for i in range(10):
+    fn_w_counter()
+print(fn_w_counter())   
+''' 
