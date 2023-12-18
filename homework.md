@@ -4,4 +4,5 @@ Use this file to claim a strategy for your homework.
 Canbula
 
 # Strategy: Timeout
+Turan_s
 LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz)
