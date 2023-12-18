@@ -7,3 +7,6 @@ Canbula
 Turan_s
 
 LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz)
+
+# Strategy: Maximum Number of Philosophers
+Ants (Serkan Karahan, Ceyhun Binal) 
