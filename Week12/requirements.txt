@@ -1,0 +1,2 @@
+numpy
+memory_profiler
