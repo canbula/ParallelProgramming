@@ -16,3 +16,6 @@ MF (Furkan, Mine)
 GroupX
 
 Ata Ceyhun ALACA
+
+# Strategy: Maximum Number of Philosophers
+Ants (Serkan Karahan, Ceyhun Binal) 
