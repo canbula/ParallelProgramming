@@ -6,8 +6,11 @@ Canbula
 # Strategy: Timeout
 Turan_s
 
-LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz)
+LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz, Zehra Özeren)
+
+Ilter
 
 # Strategy: Resource Hierarchy
+GroupX
 
 Ata Ceyhun ALACA
