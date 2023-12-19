@@ -21,3 +21,4 @@ Duygu_Dilara (Duygu Kara, Dilara Ceyda Çetin)
 
 # Strategy: Maximum Number of Philosophers
 Ants (Serkan Karahan, Ceyhun Binal) 
+Bees (Burak Can Altunoğlu, Burak Yılmaz, Mehmet Anıl)
