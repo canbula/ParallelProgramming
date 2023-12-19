@@ -6,7 +6,16 @@ Canbula
 # Strategy: Timeout
 Turan_s
 
-LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz)
+LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz, Zehra Özeren)
+
+Ilter
+
+MF (Furkan, Mine)
+
+# Strategy: Resource Hierarchy
+GroupX
+
+Ata Ceyhun ALACA
 
 # Strategy: Maximum Number of Philosophers
 Ants (Serkan Karahan, Ceyhun Binal) 
