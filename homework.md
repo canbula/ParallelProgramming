@@ -32,3 +32,4 @@ EME (Eray Ağarer, Eyyup Çöker, Ali Mert Yılmaz)
 
 # Strategy: Arbitrator Solution
 BYM (Beste Tekçeli, Yaren Mamuk, Mehmet Can Tekin
+BEEM (Ebru Çelik, Melisa Şahin, Elif Melike Özçay, Batuhan Çetin)
