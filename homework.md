@@ -10,6 +10,8 @@ LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz, Zehra Özeren)
 
 Ilter
 
+MF (Furkan, Mine)
+
 # Strategy: Resource Hierarchy
 GroupX
 
