@@ -50,7 +50,7 @@ class Philosopher(threading.Thread):
 
     def eat(self):
         with self.left_fork(self.index):
-            # time.sleep(5 + random.random() * 5)
+            time.sleep(5 + random.random() * 5)
             with self.right_fork(self.index):
                 self.spaghetti -= 1
                 self.eating = True
