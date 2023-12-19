@@ -10,5 +10,7 @@ LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz, Zehra Özeren)
 
 Ilter
 
-# Strategy: Resource Hierarchy Solution
+# Strategy: Resource Hierarchy
 GroupX
+
+Ata Ceyhun ALACA
