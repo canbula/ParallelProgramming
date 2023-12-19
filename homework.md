@@ -9,3 +9,6 @@ Turan_s
 LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz)
 
 Ilter
+
+# Strategy: Resource Hierarchy Solution
+GroupX
