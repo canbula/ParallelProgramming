@@ -36,3 +36,5 @@ BYM (Beste Tekçeli, Yaren Mamuk, Mehmet Can Tekin
 Poet (Erenay Arsal, Ömer Said Erkan, Berkay Demirci, Cengizhan Çam)
 
 Kadir Karaduman, Berke Yıldız, Evren Yalnız
+
+BEEM (Ebru Çelik, Melisa Şahin, Elif Melike Özçay, Batuhan Çetin)
