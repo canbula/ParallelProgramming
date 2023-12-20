@@ -26,7 +26,7 @@ Ants (Serkan Karahan, Ceyhun Binal)
 
 Bees (Burak Can Altunoğlu, Burak Yılmaz, Mehmet Anıl)
 
-UC (Canberk Akar, Umutcan Türk)
+UCM (Canberk Akar, Umutcan Türk, Murat Mermer)
 
 EME (Eray Ağarer, Eyyup Çöker, Ali Mert Yılmaz)
 
