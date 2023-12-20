@@ -32,3 +32,5 @@ EME (Eray Ağarer, Eyyup Çöker, Ali Mert Yılmaz)
 
 # Strategy: Arbitrator Solution
 BYM (Beste Tekçeli, Yaren Mamuk, Mehmet Can Tekin
+
+Poet (Erenay Arsal, Ömer Said Erkan, Berkay Demirci, Cengizhan Çam)
