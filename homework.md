@@ -38,3 +38,6 @@ Poet (Erenay Arsal, Ömer Said Erkan, Berkay Demirci, Cengizhan Çam)
 Kadir Karaduman, Berke Yıldız, Evren Yalnız
 
 BEEM (Ebru Çelik, Melisa Şahin, Elif Melike Özçay, Batuhan Çetin)
+
+# Strategy: Dijkstra's Solution
+Emre Özcan, Elanur İleri, Sema Nimet Ünal
