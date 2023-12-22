@@ -37,6 +37,8 @@ Poet (Erenay Arsal, Ömer Said Erkan, Berkay Demirci, Cengizhan Çam)
 
 BEEM (Ebru Çelik, Melisa Şahin, Elif Melike Özçay, Batuhan Çetin)
 
+Centilmenler(Cengizhan BAYRAM,Ferhat KÜRKÇÜOĞLU,Ümit ÜNAL)
+
 # Strategy: Chandy/Misra Solution
 Kadir Karaduman, Berke Yıldız, Evren Yalnız
 
