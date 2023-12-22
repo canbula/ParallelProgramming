@@ -42,4 +42,5 @@ Kadir Karaduman, Berke Yıldız, Evren Yalnız
 
 # Strategy: Dijkstra's Solution
 Emre Özcan, Elanur İleri, Sema Nimet Ünal
+
 Mehmet Alpergün, Selvanur Kıraç
