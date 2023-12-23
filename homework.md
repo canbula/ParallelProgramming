@@ -52,3 +52,5 @@ Emre Özcan, Elanur İleri, Sema Nimet Ünal
 Mehmet Alpergün, Selvanur Kıraç
 
 OGcar(Ogün Ak , Şaban Kerem Yeğin , Tuğcan Turunçkapı)
+
+MENDERES (Selahattin Deniz Döktür, Efecan Erdem)
