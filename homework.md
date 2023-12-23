@@ -28,7 +28,7 @@ Bees (Burak Can Altunoğlu, Burak Yılmaz, Mehmet Anıl)
 
 UCM (Canberk Akar, Umutcan Türk, Murat Mermer)
 
-EME (Eray Ağarer, Eyyup Çöker, Ali Mert Yılmaz)
+EME (Eray Ağarer, Eyyup Çöker, Ali Mert Yılmaz, Fudayl Çavuş)
 
 # Strategy: Arbitrator Solution
 BYM (Beste Tekçeli, Yaren Mamuk, Mehmet Can Tekin
