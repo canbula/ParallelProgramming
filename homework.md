@@ -12,6 +12,8 @@ Ilter
 
 MF (Furkan, Mine)
 
+SF (Samet, Furkan)
+
 # Strategy: Resource Hierarchy
 GroupX
 
