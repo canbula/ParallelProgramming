@@ -47,7 +47,7 @@ Batuhan Yavuz, A. Bora Özışık, Mert Boyaoğlu, Eren Ersoyluoğlu
 DiningVillagers(Beyza Sungar, Mustafa Eren Tugcu, Rukiye Tura)
 
 # Strategy: Dijkstra's Solution
-Emre Özcan, Elanur İleri, Sema Nimet Ünal
+Emre Özcan, Elanur İleri, Sema Nimet Ünal,Kerim Batuhan Baran
 
 Mehmet Alpergün, Selvanur Kıraç
 
