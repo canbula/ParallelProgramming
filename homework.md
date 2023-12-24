@@ -21,6 +21,8 @@ Duygu_Dilara (Duygu Kara, Dilara Ceyda Çetin)
 
 BugBusters
 
+baris zirhli
+
 # Strategy: Maximum Number of Philosophers
 Ants (Serkan Karahan, Ceyhun Binal) 
 
