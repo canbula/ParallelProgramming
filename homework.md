@@ -65,6 +65,8 @@ SF (Samet Şengün, Furkan Soylek)
 # Strategy: Token Ring Solution
 BY
 
+Tuğberk Özkara
+
 # Strategy: Locked Queue
 STRONK( M.Sina ERTUĞRUL, Mert KARDAS, Kübra ÇELEBİ )
 
