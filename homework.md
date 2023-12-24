@@ -59,3 +59,5 @@ MENDERES (Selahattin Deniz Döktür, Efecan Erdem)
 
 # Strategy: Lehmann and Rabin's Solution
 Saygın Efe Yıldız
+
+SF (Samet Şengün, Furkan Soylek)
