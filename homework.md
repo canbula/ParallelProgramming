@@ -65,6 +65,9 @@ SF (Samet Şengün, Furkan Soylek)
 # Strategy: Token Ring Solution
 BY
 
+# Waiter-Solution
+Baris Zirhli
+
 Tuğberk Özkara
 
 # Strategy: Locked Queue
