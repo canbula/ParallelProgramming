@@ -69,3 +69,5 @@ BY
 STRONK( M.Sina ERTUĞRUL, Mert KARDAS, Kübra ÇELEBİ )
 
 ATTİLA (Hamza KARAKAYA, Süleyman Burak GÜL)
+
+İbrahim Sudaş, Aylin Çelik, Kıymet Nazlım
