@@ -54,3 +54,6 @@ Mehmet Alpergün, Selvanur Kıraç
 OGcar(Ogün Ak , Şaban Kerem Yeğin , Tuğcan Turunçkapı)
 
 MENDERES (Selahattin Deniz Döktür, Efecan Erdem)
+
+# Strategy: Lehmann and Rabin's Solution
+Saygın Efe Yıldız
