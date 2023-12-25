@@ -74,7 +74,7 @@ Canbula
 # Strategy: Locked Queue
 100: STRONK( M.Sina ERTUĞRUL, Mert KARDAS, Kübra ÇELEBİ )
 
-100: ATTİLA (Hamza KARAKAYA, Süleyman Burak GÜL)
+90: ATTİLA (Hamza KARAKAYA, Süleyman Burak GÜL)
 
 90: IAK (İbrahim Sudaş, Aylin Çelik, Kıymet Nazlım)
 
