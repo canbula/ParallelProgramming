@@ -76,3 +76,6 @@ ATTİLA (Hamza KARAKAYA, Süleyman Burak GÜL)
 İbrahim Sudaş,Aylin Çelik, Kıymet Nazlım
 
 BadBoyoz( Umut AZAZİ, Onur TİRİŞ )
+
+#Strategy: Communcation based
+baris zirhli
