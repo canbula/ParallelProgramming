@@ -64,7 +64,7 @@ SF (Samet Şengün, Furkan Soylek)
 
 # Strategy: Token Ring Solution
 BY
-
+Mehmet Osman Akgün, Utkay Güngör Battal
 Tuğberk Özkara
 
 AO (Akif Tunç, Ömer Taylan Duruk)
