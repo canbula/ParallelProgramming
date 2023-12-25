@@ -17,7 +17,7 @@ MF (Furkan, Mine)
 
 80: Ata Ceyhun ALACA
 
-Duygu_Dilara (Duygu Kara, Dilara Ceyda Çetin)
+100: Duygu_Dilara (Duygu Kara, Dilara Ceyda Çetin)
 
 100: BugBusters (Atakan Karakoç, Burak Güllüler, İrem Dilşat Köse)
 
@@ -63,13 +63,13 @@ Saygın Efe Yıldız
 SF (Samet Şengün, Furkan Soylek)
 
 # Strategy: Token Ring Solution
-BY
+100: BY (Burak Talha Memiş, Yavuz Selim Erdoğan)
 
-Tuğberk Özkara
+100: Tuğberk Özkara
 
 AO (Akif Tunç, Ömer Taylan Duruk)
 
-Late (Mehmet Osman Akgün, Utkay Güngör Battal)
+100: Late (Mehmet Osman Akgün, Utkay Güngör Battal)
 
 # Strategy: Locked Queue
 STRONK( M.Sina ERTUĞRUL, Mert KARDAS, Kübra ÇELEBİ )
