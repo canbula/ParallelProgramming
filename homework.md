@@ -31,11 +31,11 @@ UCM (Canberk Akar, Umutcan Türk, Murat Mermer)
 EME (Eray Ağarer, Eyyup Çöker, Ali Mert Yılmaz, Fudayl Çavuş)
 
 # Strategy: Arbitrator Solution
-BYM (Beste Tekçeli, Yaren Mamuk, Mehmet Can Tekin)
+100: BYM (Beste Tekçeli, Yaren Mamuk, Mehmet Can Tekin)
 
 Poet (Erenay Arsal, Ömer Said Erkan, Berkay Demirci, Cengizhan Çam)
 
-BEEM (Ebru Çelik, Melisa Şahin, Elif Melike Özçay, Batuhan Çetin)
+90: BEEM (Ebru Çelik, Melisa Şahin, Elif Melike Özçay, Batuhan Çetin)
 
 Centilmenler(Cengizhan BAYRAM,Ferhat KÜRKÇÜOĞLU,Ümit ÜNAL)
 
