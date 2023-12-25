@@ -4,7 +4,7 @@ Use this file to claim a strategy for your homework.
 Canbula
 
 # Strategy: Timeout
-Turan_s
+70: Turan_s (Cevdet Ahmet Turan, Murat Turan)
 
 100: LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz, Zehra Özeren)
 
@@ -31,7 +31,7 @@ UCM (Canberk Akar, Umutcan Türk, Murat Mermer)
 EME (Eray Ağarer, Eyyup Çöker, Ali Mert Yılmaz, Fudayl Çavuş)
 
 # Strategy: Arbitrator Solution
-BYM (Beste Tekçeli, Yaren Mamuk, Mehmet Can Tekin
+BYM (Beste Tekçeli, Yaren Mamuk, Mehmet Can Tekin)
 
 Poet (Erenay Arsal, Ömer Said Erkan, Berkay Demirci, Cengizhan Çam)
 
