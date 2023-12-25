@@ -40,7 +40,7 @@ Poet (Erenay Arsal, Ömer Said Erkan, Berkay Demirci, Cengizhan Çam)
 Centilmenler(Cengizhan BAYRAM,Ferhat KÜRKÇÜOĞLU,Ümit ÜNAL)
 
 # Strategy: Chandy/Misra Solution
-Kadir Karaduman, Berke Yıldız, Evren Yalnız
+90: Kadir Karaduman, Berke Yıldız, Evren Yalnız
 
 Batuhan Yavuz, A. Bora Özışık, Mert Boyaoğlu, Eren Ersoyluoğlu
 
@@ -49,11 +49,11 @@ Batuhan Yavuz, A. Bora Özışık, Mert Boyaoğlu, Eren Ersoyluoğlu
 Barış Akın, Senem Ürkmez, Emir Sercan Korkmazgil, Ragıp Günay
 
 # Strategy: Dijkstra's Solution
-Emre Özcan, Elanur İleri, Sema Nimet Ünal
+100: Bees95 (Emre Özcan, Elanur İleri, Sema Nimet Ünal, Kerim Batuhan Baran)
 
 Mehmet Alpergün, Selvanur Kıraç
 
-OGcar(Ogün Ak , Şaban Kerem Yeğin , Tuğcan Turunçkapı)
+OGcar(Ogün Ak, Şaban Kerem Yeğin, Tuğcan Turunçkapı)
 
 MENDERES (Selahattin Deniz Döktür, Efecan Erdem)
 
@@ -76,9 +76,9 @@ STRONK( M.Sina ERTUĞRUL, Mert KARDAS, Kübra ÇELEBİ )
 
 ATTİLA (Hamza KARAKAYA, Süleyman Burak GÜL)
 
-İbrahim Sudaş,Aylin Çelik, Kıymet Nazlım
+90: IAK (İbrahim Sudaş, Aylin Çelik, Kıymet Nazlım)
 
-BadBoyoz( Umut AZAZİ, Onur TİRİŞ )
+100: BadBoyoz( Umut AZAZİ, Onur TİRİŞ )
 
 # Strategy: Communication Based
 Barış Zırhlı
