@@ -13,9 +13,9 @@ Ilter
 MF (Furkan, Mine)
 
 # Strategy: Resource Hierarchy
-GroupX
+100: GroupX (Dilara Akdeniz, Ali Duman, Esra Zeynep Başoğlu, Malgorzata Lura)
 
-Ata Ceyhun ALACA
+80: Ata Ceyhun ALACA
 
 Duygu_Dilara (Duygu Kara, Dilara Ceyda Çetin)
 
