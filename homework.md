@@ -8,7 +8,7 @@ Turan_s
 
 100: LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz, Zehra Özeren)
 
-Ilter
+90: Ilter (Özgür İlter, Berkay Bektaş, Serra Harmankaya, Cihan Yılmaz)
 
 MF (Furkan, Mine)
 
