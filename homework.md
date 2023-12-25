@@ -19,7 +19,7 @@ MF (Furkan, Mine)
 
 Duygu_Dilara (Duygu Kara, Dilara Ceyda Çetin)
 
-BugBusters
+100: BugBusters (Atakan Karakoç, Burak Güllüler, İrem Dilşat Köse)
 
 # Strategy: Maximum Number of Philosophers
 Ants (Serkan Karahan, Ceyhun Binal) 
@@ -44,7 +44,7 @@ Kadir Karaduman, Berke Yıldız, Evren Yalnız
 
 Batuhan Yavuz, A. Bora Özışık, Mert Boyaoğlu, Eren Ersoyluoğlu
 
-DiningVillagers(Beyza Sungar, Mustafa Eren Tugcu, Rukiye Tura)
+90: DiningVillagers (Beyza Sungar, Mustafa Eren Tugcu, Rukiye Tura)
 
 Barış Akın, Senem Ürkmez, Emir Sercan Korkmazgil, Ragıp Günay
 
