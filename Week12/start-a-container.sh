@@ -1,0 +1,1 @@
+docker run --rm -itd -v .:/usr/src/app --name try-processes try-processes
