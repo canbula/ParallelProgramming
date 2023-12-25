@@ -68,6 +68,7 @@ BY
 Tuğberk Özkara
 
 AO (Akif Tunç, Ömer Taylan Duruk)
+
 # Strategy: Locked Queue
 STRONK( M.Sina ERTUĞRUL, Mert KARDAS, Kübra ÇELEBİ )
 
@@ -77,5 +78,5 @@ ATTİLA (Hamza KARAKAYA, Süleyman Burak GÜL)
 
 BadBoyoz( Umut AZAZİ, Onur TİRİŞ )
 
-#Strategy: Communcation based
-baris zirhli
+# Strategy: Communication Based
+Barış Zırhlı
