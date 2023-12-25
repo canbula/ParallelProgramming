@@ -69,6 +69,8 @@ Tuğberk Özkara
 
 AO (Akif Tunç, Ömer Taylan Duruk)
 
+Late (Mehmet Osman Akgün, Utkay Güngör Battal)
+
 # Strategy: Locked Queue
 STRONK( M.Sina ERTUĞRUL, Mert KARDAS, Kübra ÇELEBİ )
 
