@@ -21,6 +21,8 @@ Canbula
 
 +100: BugBusters (Atakan Karakoç, Burak Güllüler, İrem Dilşat Köse)
 
+baris zirhli
+
 # Strategy: Maximum Number of Philosophers
 100: Ants (Serkan Karahan, Ceyhun Binal) 
 
