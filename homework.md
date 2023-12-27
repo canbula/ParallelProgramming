@@ -22,7 +22,7 @@ Canbula
 +100: BugBusters (Atakan Karakoç, Burak Güllüler, İrem Dilşat Köse)
 
 # Strategy: Maximum Number of Philosophers
-100: Ants (Serkan Karahan, Ceyhun Binal) 
++100: Ants (Serkan Karahan, Ceyhun Binal) 
 
 +100: Bees (Burak Can Altunoğlu, Burak Yılmaz, Mehmet Anıl)
 
@@ -33,11 +33,11 @@ Canbula
 # Strategy: Arbitrator Solution
 +100: BYM (Beste Tekçeli, Yaren Mamuk, Mehmet Can Tekin)
 
-90: Poet (Erenay Arsal, Ömer Said Erkan, Berkay Demirci, Cengizhan Çam)
++90: Poet (Erenay Arsal, Ömer Said Erkan, Berkay Demirci, Cengizhan Çam)
 
 +90: BEEM (Ebru Çelik, Melisa Şahin, Elif Melike Özçay, Batuhan Çetin)
 
-90: Centilmenler (Cengizhan BAYRAM, Ferhat KÜRKÇÜOĞLU, Ümit ÜNAL)
++90: Centilmenler (Cengizhan BAYRAM, Ferhat KÜRKÇÜOĞLU, Ümit ÜNAL)
 
 # Strategy: Chandy/Misra Solution
 +90: Kadir Karaduman, Berke Yıldız, Evren Yalnız
@@ -53,7 +53,7 @@ Canbula
 
 +90: Mehmet Alpergün, Selvanur Kıraç
 
-100: OGcar(Ogün Ak, Şaban Kerem Yeğin, Tuğcan Turunçkapı)
++100: OGcar(Ogün Ak, Şaban Kerem Yeğin, Tuğcan Turunçkapı)
 
 +90: MENDERES (Selahattin Deniz Döktür, Efecan Erdem)
 
@@ -72,7 +72,7 @@ Canbula
 +100: Late (Mehmet Osman Akgün, Utkay Güngör Battal)
 
 # Strategy: Locked Queue
-100: STRONK( M.Sina ERTUĞRUL, Mert KARDAS, Kübra ÇELEBİ )
++100: STRONK( M.Sina ERTUĞRUL, Mert KARDAS, Kübra ÇELEBİ )
 
 +90: ATTİLA (Hamza KARAKAYA, Süleyman Burak GÜL)
 
