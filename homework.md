@@ -12,6 +12,8 @@ Canbula
 
 100: MF (Furkan, Mine)
 
+SF (Samet, Furkan)
+
 # Strategy: Resource Hierarchy
 100: GroupX (Dilara Akdeniz, Ali Duman, Esra Zeynep Başoğlu, Malgorzata Lura)
 
