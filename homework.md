@@ -4,16 +4,16 @@ Use this file to claim a strategy for your homework.
 Canbula
 
 # Strategy: Timeout
-+70: Turan_s (Cevdet Ahmet Turan, Murat Turan)
++80: Turan_s (Cevdet Ahmet Turan, Murat Turan)
 
 +100: LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz, Zehra Özeren)
 
 90: Ilter (Özgür İlter, Berkay Bektaş, Serra Harmankaya, Cihan Yılmaz)
 
-100: MF (Furkan, Mine)
++100: MF (Furkan, Mine)
 
 # Strategy: Resource Hierarchy
-100: GroupX (Dilara Akdeniz, Ali Duman, Esra Zeynep Başoğlu, Malgorzata Lura)
++100: GroupX (Dilara Akdeniz, Ali Duman, Esra Zeynep Başoğlu, Malgorzata Lura)
 
 +80: Ata Ceyhun ALACA
 
@@ -24,7 +24,7 @@ Canbula
 # Strategy: Maximum Number of Philosophers
 100: Ants (Serkan Karahan, Ceyhun Binal) 
 
-100: Bees (Burak Can Altunoğlu, Burak Yılmaz, Mehmet Anıl)
++100: Bees (Burak Can Altunoğlu, Burak Yılmaz, Mehmet Anıl)
 
 +100: UCM (Canberk Akar, Umutcan Türk, Murat Mermer)
 
@@ -51,7 +51,7 @@ Canbula
 # Strategy: Dijkstra's Solution
 +100: Bees95 (Emre Özcan, Elanur İleri, Sema Nimet Ünal, Kerim Batuhan Baran)
 
-90: Mehmet Alpergün, Selvanur Kıraç
++90: Mehmet Alpergün, Selvanur Kıraç
 
 100: OGcar(Ogün Ak, Şaban Kerem Yeğin, Tuğcan Turunçkapı)
 
