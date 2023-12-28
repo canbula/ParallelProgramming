@@ -81,4 +81,4 @@ Canbula
 +100: BadBoyoz( Umut AZAZİ, Onur TİRİŞ )
 
 # Strategy: Communication Based
-100: Barış Zırhlı
++100: Barış Zırhlı
