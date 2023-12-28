@@ -8,7 +8,7 @@ Canbula
 
 +100: LethalLeblebi (Sinem Gençer, Onur Yaşar, Furkan Eryılmaz, Zehra Özeren)
 
-90: Ilter (Özgür İlter, Berkay Bektaş, Serra Harmankaya, Cihan Yılmaz)
++90: Ilter (Özgür İlter, Berkay Bektaş, Serra Harmankaya, Cihan Yılmaz)
 
 +100: MF (Furkan, Mine)
 
