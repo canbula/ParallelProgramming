@@ -67,7 +67,7 @@ Canbula
 
 +100: Tuğberk Özkara
 
-80: AO (Akif Tunç, Ömer Taylan Duruk)
++80: AO (Akif Tunç, Ömer Taylan Duruk)
 
 +100: Late (Mehmet Osman Akgün, Utkay Güngör Battal)
 
