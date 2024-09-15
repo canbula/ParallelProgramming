@@ -1,4 +1,4 @@
-# Parallel Programming 2023
+# Parallel Programming 2024
 Repository for Parallel Programming course given by Assoc. Prof. Dr. Bora Canbula 
 at Computer Engineering Department of Manisa Celal Bayar University.
 
@@ -29,16 +29,8 @@ At the end of the every chapter, you will also find a Problem Set.
 Students are requested to submit their homeworks to folders WeekXX, as defined in the LectureNotes.pdf. 
 The codes will be subject to certain GitHub action workflows to be tested automatically.
 
-Variable Types and Sequences<br>[![Week02 Homework](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-02.yml/badge.svg?branch=master)](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-02.yml)
-
-Functions and Decorators<br>[![Week03 Homework](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-03.yml/badge.svg)](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-03.yml)
-
-Coroutines<br>[![Week04 Homework](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-04.yml/badge.svg)](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-04.yml)
-
-Monte Carlo Pi Estimator as a Generator<br>[![Week06 Homework](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-06.yml/badge.svg)](https://github.com/canbula/ParallelProgramming/actions/workflows/python-app-week-06.yml)
-
 # Codes and Videos from Previous Years
-You can change the branch to see the codes from previous years. Also there is a YouTube playlist, 
+You can switch the **branch** to see the codes from previous years. Also there is a YouTube playlist, 
 which includes the supplementary videos for the course as given in 2021. The videos do not include 
 the introductory Python and asynchronous programming part, so they start from Week06.
 
