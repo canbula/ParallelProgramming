@@ -1,3 +1,0 @@
-numpy
-numba
-memory_profiler

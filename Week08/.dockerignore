@@ -1,5 +1,0 @@
-Dockerfile
-.dockerignore
-build-docker-image.sh
-start-a-container.sh
-access-the-container.sh
