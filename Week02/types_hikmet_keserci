@@ -1,0 +1,4 @@
+my_int = 45
+my_float = 1.3e-3
+my_bool = false
+my_complex = 65j
