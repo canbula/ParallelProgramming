@@ -17,21 +17,21 @@ def calculate_pyramid_height(number_of_blocks):
   
     # Initial height and number of blocks required for the first layer
     height = 0
-    number = 1
+    blocks_needed = 1
     
-    # Check if the input is an integer
-    if isinstance(number_of_blocks, int):
-        # If the number of blocks is less than 3, a pyramid cannot be built
+    # Check if the input is a positive integer
+    if isinstance(number_of_blocks, int) and number_of_blocks >0:
+        # If the number of blocks is less than 3, a pyramid height will be 1
         if number_of_blocks < 3:
-            return 0
+            return 1
         else:
             # Continue building the pyramid as long as there are enough blocks for the next layer
-            while number_of_blocks >= number:
-                number_of_blocks -= number
-                number += 1
+            while number_of_blocks >= blocks_needed:
+                number_of_blocks -= blocks_needed
+                blocks_needed += 1
                 height += 1
             return height
     else:
-        print("Invalid parameter! Parameter must be an integer")
+        print("Invalid parameter! Parameter must be a positive integer")
         return None
       
