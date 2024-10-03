@@ -24,6 +24,3 @@ def reverse_dict(d: dict) -> dict:
     for k,v in d.items():
         reversed_dict[v] = k
     return reversed_dict
-
-
-print(reverse_dict({1: 1, 2: 1, 3: 1}) == {1: 3})
