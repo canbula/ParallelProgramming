@@ -23,7 +23,7 @@ def calculate_pyramid_height(number_of_blocks):
     if isinstance(number_of_blocks, int):
         # If the number of blocks is less than 3, a pyramid cannot be built
         if number_of_blocks < 3:
-            return height
+            return 0
         else:
             # Continue building the pyramid as long as there are enough blocks for the next layer
             while number_of_blocks >= number:
@@ -35,5 +35,3 @@ def calculate_pyramid_height(number_of_blocks):
         print("Invalid parameter! Parameter must be an integer")
         return None
       
-# Test the function       
-calculate_pyramid_height(15)
