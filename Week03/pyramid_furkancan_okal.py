@@ -3,6 +3,3 @@ def calculate_pyramid_height(numOfBlocks):
     while ((height * (height + 1))/2) <= numOfBlocks:
         height+=1
     return height - 1
-
-
-print(calculate_pyramid_height(6))
