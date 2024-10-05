@@ -10,6 +10,6 @@ def list_counts(seq: list) -> dict:
 def reverse_dict(d: dict) -> dict:
     d_reverse = dict()
     for key in d:
-        value = d[i]
+        value = d[key]
         d_reverse.update({value : key})
     return d_reverse
