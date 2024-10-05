@@ -1,19 +1,15 @@
 def remove_duplicates(seq: list) -> list:
-    seq_set = set(seq)
-    return list(seq_set)
+    return list(set(seq))
 
 def list_counts(seq: list) -> dict:
-    seq_set = set(seq)
-    seq_dict = {key : 0 for key in seq_set}
-
+    seq_dict = {key : 0 for key in set(seq)}
     for i in range(len(seq)):
         seq_dict[seq[i]] += 1
-
     return seq_dict
 
 def reverse_dict(d: dict) -> dict:
     d_reverse = dict()
-    for i in d:
+    for key in d:
         value = d[i]
-        d_reverse.update({value : i})
+        d_reverse.update({value : key})
     return d_reverse
