@@ -2,7 +2,7 @@ print("Equality")
 a = 4
 print(a == 4)
 print(id(a) == id(4))
-print(a is 4)
+# print(a is 4)
 print(id(a) is id(4))
 
 print("Left-sided binding")
