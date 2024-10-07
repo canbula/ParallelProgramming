@@ -4,6 +4,7 @@ import os
 files = [f for f in os.listdir(os.path.dirname(__file__)) if f.startswith("types")]
 for f in files:
     exec("import " + f[:-3] + " as " + f[:-3])
+    print(f"The module {f[:-3]} has been imported.")
 
 
 def test_names():
