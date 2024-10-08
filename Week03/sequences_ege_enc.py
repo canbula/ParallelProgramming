@@ -4,16 +4,14 @@ def unique_items(seq):
 def item_frequencies(seq):
     d = {}
     for i in seq:
-        try:
+        if i in d:
             d[i] += 1
-        except:
-            d[i] = 0
-            d[i] += 1
-                        
+        else:
+            d[i] = 1
     return d
 
 def reverse_dict(d):
-    nd ={}
-    for i,h in d.items():
-        nd[h] = i
-    return nd
+    nd = {}
+    for i, h in d.items():
+        nd[h] = i
+    return nd
