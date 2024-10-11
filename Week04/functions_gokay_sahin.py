@@ -33,7 +33,7 @@ call_count = 0
 caller_dict = {}
 
 
-def fn_w_counter():
+def fn_w_counter() -> (int, dict[str, int]):
     """
     Tracks the number of times the function has been called and keeps a record of the caller module.
 
@@ -57,6 +57,5 @@ def fn_w_counter():
         caller_dict[module_name] = 1
 
     return call_count, caller_dict
-
 
 
