@@ -4,20 +4,20 @@ import inspect
 custom_power = lambda x = 0, /, e = 1 : x ** e
 
 
-def custom_equation(x: int | float = 0, y: int | float = 0, /, a: int | float = 1, b: int | float = 1, *, c: int | float = 1) -> float:
+def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int = 1) -> float:
     """
     Calculates the result of the equation (x^a + y^b) / c.
 
     :param x: The base for the first term (defaults to 0).
-    :type x: int or float
+    :type x: int
     :param y: The base for the second term (defaults to 0).
-    :type y: int or float
+    :type y: int
     :param a: The exponent for the first term (defaults to 1).
-    :type a: int or float
+    :type a: int
     :param b: The exponent for the second term (defaults to 1).
-    :type b: int or float
+    :type b: int
     :param c: The divisor (must not be 0, defaults to 1).
-    :type c: int or float
+    :type c: int
 
     :raises ZeroDivisionError: Raised if `c` is 0 to prevent division by zero.
 
