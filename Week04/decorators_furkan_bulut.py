@@ -15,6 +15,11 @@ def performance(func):
     :returns: The wrapped function that measures performance.
     """
 
+    # Initialize function attributes to keep track of total performance
+    func.counter = 0
+    func.total_time = 0
+    func.total_mem = 0
+
     def _performance(*args, **kwargs):
         """
         Internal function that executes the decorated function and
@@ -24,11 +29,7 @@ def performance(func):
         :param kwargs: Keyword arguments to pass to the decorated function.
         """
 
-        counter = 0
-        total_time = 0
-        total_mem = 0
-
-        counter += 1
+        func.counter += 1
         tracemalloc.start()
         start_time = time.time()
 
@@ -44,9 +45,10 @@ def performance(func):
             elapsed_time = end_time - start_time
             memory_usage = peak
 
-            total_time += elapsed_time
-            total_mem += memory_usage
-            print_results(func.__name__, elapsed_time, memory_usage, counter, total_time, total_mem)
+            func.total_time += elapsed_time
+            func.total_mem += memory_usage
+
+            print_results(func.__name__, elapsed_time, memory_usage, func.counter, func.total_time, func.total_mem)
 
     return _performance
 
@@ -76,4 +78,3 @@ def print_results(func_name, elapsed_time, memory_usage, counter, total_time, to
         f"Total Memory Usage: {total_mem / 1024:.2f} KB\n"
     )
     print(results)
-
