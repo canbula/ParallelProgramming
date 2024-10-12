@@ -6,7 +6,7 @@ def performance(func):
     total_time = 0.0
     total_memory = 0.0
 
-    def wrapped(*args, **kwargs):
+    def wrapped_function(*args, **kwargs):
         nonlocal call_count, total_time, total_memory
         
         tracemalloc.start()
