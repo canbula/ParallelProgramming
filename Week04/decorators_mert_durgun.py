@@ -2,12 +2,12 @@ import time
 import tracemalloc
 
 def performance(func):
-    call_count = 0
+    counter = 0
     total_time = 0.0
-    total_memory = 0.0
+    total_mem = 0.0
 
     def wrapped_function(*args, **kwargs):
-        nonlocal call_count, total_time, total_memory
+        nonlocal counter, total_time, total_mem
         
         tracemalloc.start()
         start_time = time.time()
@@ -16,18 +16,18 @@ def performance(func):
         current_memory, peak_memory = tracemalloc.get_traced_memory()
         tracemalloc.stop()
         
-        call_count += 1
+        counter += 1
         total_time += end_time - start_time
-        total_memory += peak_memory
+        total_mem += peak_memory
 
-        wrapped_function.call_count = call_count
+        wrapped_function.counter = counter
         wrapped_function.total_time = total_time
-        wrapped_function.total_memory = total_memory
+        wrapped_function.total_mem = total_mem
 
         return result
 
-    wrapped_function.call_count = call_count
+    wrapped_function.counter = counter
     wrapped_function.total_time = total_time
-    wrapped_function.total_memory = total_memory
+    wrapped_function.total_mem = total_mem
 
     return wrapped_function
