@@ -1,12 +1,12 @@
 import time
 import tracemalloc
 
-def performance_decorator(func):
+def performance(func):
     call_count = 0
     total_time = 0.0
     total_memory = 0.0
 
-    def wrapped_function(*args, **kwargs):
+    def wrapped(*args, **kwargs):
         nonlocal call_count, total_time, total_memory
         
         tracemalloc.start()
