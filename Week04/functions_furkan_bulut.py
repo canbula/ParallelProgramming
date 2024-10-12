@@ -1,15 +1,11 @@
 custom_power = lambda x=0, /, e=1: x ** e
-"""
-fn = lambda arg1,arg2: arg1+arg2
-"""
-
 
 def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int = 1) -> float:
     """
     Calculate a custom equation based on the parameters provided.
 
     This function computes the result of the equation:
-    \((x^a + y^b) / c\), where:
+    (x^a + y^b) / c, where:
     - `x` and `y` are the bases for exponentiation.
     - `a` and `b` are the exponents for `x` and `y`, respectively.
     - `c` serves as the divisor, which cannot be zero.
@@ -37,7 +33,7 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
         is not allowed.
 
     :returns:
-        The result of the equation \((x^a + y^b) / c\).
+        The result of the equation (x^a + y^b) / c.
         This will return a float value representing the computed result.
 
     :example:
@@ -54,8 +50,7 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
 
     return (x ** a + y ** b) / c
 
-
-def fn_w_counter():
+def fn_w_counter() -> tuple[int, dict[str, int]]:
     """
     A function that counts how many times it has been called and tracks callers.
 
@@ -89,3 +84,4 @@ def fn_w_counter():
     else:
         fn_w_counter.callers[caller_name] = 1
     return fn_w_counter.call_count, fn_w_counter.callers
+
