@@ -1,77 +1,71 @@
 import time
 import tracemalloc
 
-class Performance:
+def performance(func):
     """
-    Performance class for measuring execution time and memory usage of functions.
+    Decorator to measure performance metrics of a function.
 
-    This class acts as a decorator to track the performance metrics of functions.
+    This decorator tracks the execution time and memory usage of the decorated
+    function, printing the results after each call.
+
+    :param func: The function to be decorated.
+    :returns: A wrapped function that tracks performance metrics.
+    :raises Exception: If an error occurs during the execution of the decorated function.
     """
+    counter = 0
+    total_time = 0
+    total_mem = 0
 
-    def __init__(self):
+    def _performance(*args, **kwargs):
         """
-        Initialize the Performance class.
+        Wrapper function that measures execution time and memory usage.
 
-        :param counter: Number of times the decorated function has been called.
-        :param total_time: Total execution time of the decorated function.
-        :param total_mem: Total peak memory usage of the decorated function.
+        :param args: Positional arguments to be passed to the decorated function.
+        :param kwargs: Keyword arguments to be passed to the decorated function.
         """
-        self.counter = 0
-        self.total_time = 0
-        self.total_mem = 0
-
-    def __call__(self, func):
-        """
-        Decorate the given function to measure its performance.
-
-        :param func: The function to be decorated.
-        :returns: A wrapped function that tracks performance metrics.
-        """
-        def _performance(*args, **kwargs):
-            self.calculate(func, *args, **kwargs)
-
-        return _performance
-
-    def calculate(self, func, *args, **kwargs):
-        """
-        Calculate the execution time and memory usage of the decorated function.
-
-        :param func: The function whose performance is to be measured.
-        :param args: Positional arguments to be passed to the function.
-        :param kwargs: Keyword arguments to be passed to the function.
-        :raises Exception: If the function execution fails.
-        """
-        self.counter += 1
+        nonlocal counter, total_time, total_mem
+        counter += 1
         tracemalloc.start()
         start_time = time.time()
 
-        func(*args, **kwargs)
+        try:
+            func(*args, **kwargs)
+        except Exception as e:
+            print(f"Error occurred: {e}")
+        finally:
+            end_time = time.time()
+            current, peak = tracemalloc.get_traced_memory()
+            tracemalloc.stop()
 
-        end_time = time.time()
-        current, peak = tracemalloc.get_traced_memory()
-        tracemalloc.stop()
+            elapsed_time = end_time - start_time
+            memory_usage = peak
 
-        elapsed_time = end_time - start_time
-        memory_usage = peak
+            total_time += elapsed_time
+            total_mem += memory_usage
+            print_results(func.__name__, elapsed_time, memory_usage, counter, total_time, total_mem)
 
-        self.total_time += elapsed_time
-        self.total_mem += memory_usage
-        self.print_results(func.__name__, elapsed_time, memory_usage)
+    return _performance
 
-    def print_results(self, func_name, elapsed_time, memory_usage):
-        """
-        Display the performance results of the decorated function.
+def print_results(func_name, elapsed_time, memory_usage, counter, total_time, total_mem):
+    """
+    Display the performance results of the decorated function.
 
-        :param func_name: The name of the function being measured.
-        :param elapsed_time: The time taken for the function to execute, in seconds.
-        :param memory_usage: The peak memory usage during the function execution, in bytes.
-        """
-        results = (
-            f"Function Name: {func_name}\n"
-            f"Number of Calls: {self.counter}\n"
-            f"Elapsed Time: {elapsed_time:.6f} seconds\n"
-            f"Memory Usage: {memory_usage / 1024:.2f} KB\n"
-            f"Total Time: {self.total_time:.6f} seconds\n"
-            f"Total Memory Usage: {self.total_mem / 1024:.2f} KB\n"
-        )
-        print(results)
+    This function prints the name of the function being measured, the elapsed time,
+    memory usage, and the total statistics over all calls.
+
+    :param func_name: The name of the function being measured.
+    :param elapsed_time: The time taken for the function to execute, in seconds.
+    :param memory_usage: The peak memory usage during the function execution, in bytes.
+    :param counter: Number of times the decorated function has been called.
+    :param total_time: Total execution time of the decorated function.
+    :param total_mem: Total peak memory usage of the decorated function.
+    """
+    results = (
+        f"Function Name: {func_name}\n"
+        f"Number of Calls: {counter}\n"
+        f"Elapsed Time: {elapsed_time:.6f} seconds\n"
+        f"Memory Usage: {memory_usage / 1024:.2f} KB\n"
+        f"Total Time: {total_time:.6f} seconds\n"
+        f"Total Memory Usage: {total_mem / 1024:.2f} KB\n"
+    )
+    print(results)
