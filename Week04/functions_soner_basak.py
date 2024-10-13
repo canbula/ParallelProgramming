@@ -22,21 +22,14 @@ def custom_equation(x: int = 0, y: int = 0,/, a: int = 1, b: int = 1,*, c: int =
     return (x**a + y**b) / c
 
 
-counter = {}
-total_calls = 0
-
-def fn_w_counter() -> tuple[int, dict[str, int]]:
-    """
-    Tracks the number of calls and caller information.
-
-    :return: A tuple with the total call count and a dictionary
-             of caller names and their call counts.
-    """
-    global total_calls
-    total_calls += 1
-    counter[__name__] = counter.get(__name__, 0) + 1
-    return total_calls, counter
-
-# Örnek kullanım
-for _ in range(10):
-    fn_w_counter()
+def fn_w_counter() -> (int, dict[str, int]):
+    if not hasattr(fn_w_counter, "counter"):
+        fn_w_counter.counter = (0, {})
+    counter_num = fn_w_counter.counter[0]
+    counter_dict = fn_w_counter.counter[1]
+    if __name__ in counter_dict:
+        counter_dict[__name__] += 1
+    else:
+        counter_dict[__name__] = 1
+    fn_w_counter.counter = (counter_num + 1, counter_dict)
+    return fn_w_counter.counter
