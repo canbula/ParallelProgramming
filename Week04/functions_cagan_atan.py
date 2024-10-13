@@ -7,8 +7,8 @@ def custom_equation(
     """
     This function calculates (x**a + y**b) / c.
 
-    :param int x: First variable ,defaults to 0
-    :param int y: Second variable ,defaults to 0
+    :param int x: First variable, defaults to 0
+    :param int y: Second variable, defaults to 0
     :param int a: Power of x, defaults to 1
     :param int b: Power of y, defaults to 1
     :param int c: Denominator, defaults to 1
