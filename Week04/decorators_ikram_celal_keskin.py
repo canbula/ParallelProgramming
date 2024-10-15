@@ -1,8 +1,10 @@
 import time
 import psutil
 import os
+import gc
 
-pid = -1
+
+pid = -1 #process id of current python process
 
 def performance(func):
     """
@@ -40,18 +42,22 @@ def performance(func):
         if pid == -1:
             pid = os.getpid()
         
+        gc.disable() #Sometimes garbage collector can affect the memory usage. So, it is better to disable it.
+        
         # Get memory usage before the function call
         mem_begin = psutil.Process(pid).memory_info().rss
         try:
-            result = func(*args, **kwargs)  # Calling actual function for testing the time and memory
+            result = func(*args, **kwargs)
         finally:
             mem_end = psutil.Process(pid).memory_info().rss # Get memory usage after the function call
+            peak_mem= max(mem_end, mem_begin) - mem_begin # Get the peak memory usage
+            end_time = time.time() # Get the end time
             
-            end_time = time.time() # Get the end time 
+            gc.enable() # Enable garbage collector when the function is done.
             
             setattr(performance, 'counter', getattr(performance, 'counter') + 1)
             setattr(performance, 'total_time', getattr(performance, 'total_time') + (end_time - start_time))
-            setattr(performance, 'total_mem', getattr(performance, 'total_mem') + (mem_end - mem_begin))
+            setattr(performance, 'total_mem', getattr(performance, 'total_mem') + peak_mem)
         
         return result
 
