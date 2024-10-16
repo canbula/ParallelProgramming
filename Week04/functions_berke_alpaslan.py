@@ -16,18 +16,17 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
     """
     return (x**a + y**b) / c
 
-call_counter = 0
-caller_count_dict = {}
 def fn_w_counter() -> (int, dict[str, int]):
-    global call_counter
-    global caller_count_dict
+    if not hasattr(fn_w_counter, "call_counter"):
+        fn_w_counter.call_counter = 0
+        fn_w_counter.caller_count_dict = {}
 
     caller = __name__
-    call_counter += 1
+    fn_w_counter.call_counter += 1
 
-    if caller not in caller_count_dict:
-        caller_count_dict[caller] = 1
+    if caller not in fn_w_counter.caller_count_dict:
+        fn_w_counter.caller_count_dict[caller] = 1
     else:
-        caller_count_dict[caller] += 1
+        fn_w_counter.caller_count_dict[caller] += 1
 
-    return call_counter, caller_count_dict
+    return fn_w_counter.call_counter, fn_w_counter.caller_count_dict
