@@ -29,33 +29,36 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
     return (x**a + y**b) / c
 
 
-call_count = 0
-caller_dict = {}
-
 
 def fn_w_counter() -> (int, dict[str, int]):
     """
-    Tracks the number of times the function has been called and keeps a record of the caller module.
+    Tracks the number of times the function is called and keeps a count of calls per module.
 
-    This function increments a global `call_count` variable and updates a global `caller_dict` dictionary,
-    which stores the number of calls made from each module.
+    This function increments a counter each time it is called and stores the number of calls 
+    per module in a dictionary. The counter is stored as a function attribute and is initialized 
+    on the first call. The module name from which the function is called is tracked using the 
+    `inspect` module.
 
-    :return: A tuple containing the total call count and a dictionary with the module names as keys and the number of calls as values.
-    :rtype: tuple(int, dict)
+    :returns: 
+        - A tuple where the first value is the total number of calls made to the function, 
+          and the second value is a dictionary containing the count of calls per module.
+        - The dictionary keys are module names, and the values are the corresponding call counts.
+
+    :rtype: tuple(int, dict[str, int])
     """
-    global call_count
-    global caller_dict
-    call_count += 1
+    if not hasattr(fn_w_counter, "call_count"):
+        fn_w_counter.call_count = 0
+        fn_w_counter.caller_dict = {}
+
+    fn_w_counter.call_count += 1
 
     frame = inspect.currentframe()
 
     module_name = inspect.getmodule(frame).__name__  # __main__
 
-    if module_name in caller_dict:
-        caller_dict[module_name] += 1
+    if module_name in fn_w_counter.caller_dict:
+        fn_w_counter.caller_dict[module_name] += 1
     else:
-        caller_dict[module_name] = 1
+        fn_w_counter.caller_dict[module_name] = 1
 
-    return call_count, caller_dict
-
-
+    return fn_w_counter.call_count, fn_w_counter.caller_dict
