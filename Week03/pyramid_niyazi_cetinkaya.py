@@ -6,5 +6,4 @@ def calculate_pyramid_height(number_of_blocks: int) -> int:
         else:break
     return height
 
-    
-print(calculate_pyramid_height(7))
+
