@@ -1,9 +1,9 @@
-# kopyaları silen fonksiyon
+
 def remove_duplicates(seq: list) -> list:
     return list(dict.fromkeys(seq))
 
 
-# list sayısını fonksiyonu
+
 def list_counts(seq: list) -> dict:
     counts = {}
     for item in seq:
@@ -11,10 +11,8 @@ def list_counts(seq: list) -> dict:
     return counts
 
 
-
-# dictionaryleri ters çeviriyor fonksiyonu
 def reverse_dict(d: dict) -> dict:
     reversed_dict = {}
     for key, value in d.items():
-        reversed_dict[value] = key  # Sonuncusu aynı değere sahip olan öğe overwrite eder
+        reversed_dict[value] = key  
     return reversed_dict
