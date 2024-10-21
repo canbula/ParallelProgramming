@@ -1,15 +1,15 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Week05 Homework
+name: Week06 Homework
 
 on:
   push:
     branches: [ "master" ]
-    paths: ['Week05/**']
+    paths: ['Week06/**']
   pull_request:
     branches: [ "master" ]
-    paths: ['Week05/**']
+    paths: ['Week06/**']
 
 permissions:
   contents: read
@@ -38,4 +38,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest -q --tb=no 'Week05/test_awaitme.py'
+        pytest -q --tb=no 'Week06/test_timer.py'
