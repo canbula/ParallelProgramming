@@ -5,6 +5,5 @@ def custom_equation(x: int = 0, y: int = 0, a: int = 1, b: int = 1, *, c: int = 
 
 counter = 0
 def fn_w_counter() -> (int, dict[str, int]):
-    global counter
     counter += 1
     return counter, {"functions_1": counter}
