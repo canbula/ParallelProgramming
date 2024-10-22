@@ -1,2 +1,2 @@
 student_id = "210315037"
-student_name= "Hamza Kızıltoprak"
+full_name= "Hamza Kızıltoprak"
