@@ -1,5 +1,6 @@
 def custom_power(x=0, /, e=1):
-    return e: x ** e  # Direct calculation
+    """Calculate x raised to the power of e."""
+    return x ** e  # Direct calculation
 
 def custom_equation(x: int = 0, /, y: int = 0,  a: int = 1, b: int = 1, *, c: int = 1) -> float:
     """
@@ -20,15 +21,8 @@ from collections import defaultdict
 
 call_count = defaultdict(int)
 
-def fn_w_counter():
-    """
-    A function that counts the number of calls and returns a tuple.
-    
-    The first element is the total number of calls.
-    The second element is a dictionary with caller information (caller __name__ and count).
-    
-    :return: A tuple of an integer and a dictionary
-    """
+def fn_w_counter() -> tuple[int, dict[str, int]]:
+    """A function that counts the number of calls."""
     def wrapper():
         import inspect
         caller_name = inspect.stack()[1].function
