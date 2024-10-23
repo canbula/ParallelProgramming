@@ -22,9 +22,11 @@ from collections import defaultdict
 
 call_count = defaultdict(int)
 
-def fn_w_counter()-> tuple:
+def fn_w_counter()-> tuple[int, dict[str, int]]:
     """A function that counts the number of calls."""
-    def wrapper():
+    call_count = defaultdict(int)
+    
+    def wrapper() -> tuple[int, dict[str, int]]:
         import inspect
         caller_name = inspect.stack()[1].function
         call_count[caller_name] += 1
