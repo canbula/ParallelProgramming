@@ -45,6 +45,14 @@ class PerformanceTracker:
         print(f"Total memory used: {self.total_mem / 1024:.4f} KB")
         
         return result
+        
+    def get_stats(self):
+        """Returns the performance statistics."""
+        return {
+            "counter": self.counter,
+            "total_time": self.total_time,
+            "total_mem": self.total_mem
+        }
 
 def performance(func):
     """A simple function decorator to track performance."""
@@ -61,3 +69,8 @@ if __name__ == "__main__":
     compute_squares(1000)
     compute_squares(2000)
     compute_squares(3000)
+
+    # Access performance statistics
+    tracker = compute_squares
+    stats = tracker.get_stats()
+    
