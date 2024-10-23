@@ -1,6 +1,4 @@
-def custom_power(x=0, /, e=1):
-    """A lambda function that calculates x raised to the power of e."""
-    return (lambda x, e: x ** e)(x, e) #Direct Calculation
+custom_power = lambda x=0, e=1: x ** e
 
 def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int = 1) -> float:
 
@@ -19,18 +17,19 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
     return (x**a + y**b) / c
 
 from collections import defaultdict
+import inspect
 
 call_count = defaultdict(int)
 
-def fn_w_counter()-> tuple[int, dict[str, int]]:
+def fn_w_counter()-> (int, dict[str, int]):
     """A function that counts the number of calls."""
-    call_count = defaultdict(int)
-    
-    def wrapper() -> tuple[int, dict[str, int]]:
-        import inspect
-        caller_name = inspect.stack()[1].function
-        call_count[caller_name] += 1
-        total_calls = sum(call_count.values())
-        return total_calls, dict(call_count)
-    
-    return wrapper
+    caller_name = inspect.stack()[1].function  # Get the name of the calling function
+
+    # Increment the global counter
+    call_count[caller_name] += 1
+
+    # Calculate the total number of calls
+    total_calls = sum(call_count.values())
+
+    # Return the total call count and the call counts for each function
+    return total_calls, dict(call_count)
