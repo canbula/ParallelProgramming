@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 def remove_duplicates(seq: list) -> list:
     unique_list = []
     for number in seq:
