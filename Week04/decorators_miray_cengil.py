@@ -51,7 +51,7 @@ def performance(func):
     return PerformanceTracker(func)
 
 # Example function to test
-@performance_tracker
+@performance
 def compute_squares(n):
     """Returns a list of squared numbers up to n."""
     return [i**2 for i in range(n)]
