@@ -1,76 +1,67 @@
+import os
+import inspect
 import time
+import random
 import tracemalloc
-from functools import wraps
-
-class PerformanceTracker:
-    """
-    A decorator class that tracks the performance of a function.
-    Attributes:
-        counter (int): Number of times the decorated function is called.
-        total_time (float): Total time the function has taken.
-        total_mem (int): Total memory the function has consumed in bytes.
-    """
-    def __init__(self, func):
-        self.func = func
-        self.counter = 0
-        self.total_time = 0
-        self.total_mem = 0
-
-    def __call__(self, *args, **kwargs):
-        """Measures the execution time and memory usage of the function."""
-        self.counter += 1
-
-        # Start time measurement
-        start_time = time.perf_counter()
-
-        # Start memory tracking
-        tracemalloc.start()
-
-        result = self.func(*args, **kwargs)
-
-        # Stop memory tracking
-        current, peak = tracemalloc.get_traced_memory()
-        tracemalloc.stop()
-
-        # Stop time measurement
-        end_time = time.perf_counter()
-
-        # Update total time and memory
-        self.total_time += (end_time - start_time)
-        self.total_mem += peak
-
-        # Output statistics (optional for debugging)
-        print(f"Function '{self.func.__name__}' called {self.counter} times")
-        print(f"Total time taken: {self.total_time:.4f} seconds")
-        print(f"Total memory used: {self.total_mem / 1024:.4f} KB")
-        
-        return result
-        
-    def get_stats(self):
-        """Returns the performance statistics."""
-        return {
-            "counter": self.counter,
-            "total_time": self.total_time,
-            "total_mem": self.total_mem
-        }
 
 def performance(func):
-    """A simple function decorator to track performance."""
-    return PerformanceTracker(func)
+    """
+    A decorator to measure the performance of a function.
 
-# Example function to test
-@performance
-def compute_squares(n):
-    """Returns a list of squared numbers up to n."""
-    return [i**2 for i in range(n)]
+    Attributes:
+        counter: How many times the function has been called.
+        total_time: The total time the function has taken to run.
+        total_mem: The total memory used by the function.
+    """
 
-# Running the decorated function multiple times
-if __name__ == "__main__":
-    compute_squares(1000)
-    compute_squares(2000)
-    compute_squares(3000)
+    # Initialize the counters
+    performance.counter = 0
+    performance.total_time = 0.0
+    performance.total_mem = 0.0
 
-    # Access performance statistics
-    tracker = compute_squares
-    stats = tracker.get_stats()
+    def wrapper(*args, **kwargs):
+        # Start tracking memory
+        tracemalloc.start()
+        
+        # Record the start time
+        start_time = time.time()
+        
+        # Call the actual function
+        result = func(*args, **kwargs)
+        
+        # Calculate how long it took
+        time_taken = time.time() - start_time
+        
+        # Capture the peak memory usage
+        current_mem, peak_mem = tracemalloc.get_traced_memory()
+        tracemalloc.stop()
+        
+        # Update the stats
+        performance.counter += 1
+        performance.total_time += time_taken
+        performance.total_mem += peak_mem  # Peak memory during execution
+        
+        return result
     
+    return wrapper
+
+# Test functions
+@performance
+def example_function(x):
+    time.sleep(x)
+    return x ** 2
+
+@performance
+def memory_intensive_function(size):
+    return [random.randint(0, 100) for _ in range(size)]
+
+# Execute test functions
+example_function(1)
+example_function(2)
+example_function(3)
+memory_intensive_function(1000000)
+
+# Access performance metrics
+print(f"Function called {performance.counter} times.")
+print(f"Total time taken: {performance.total_time:.4f} seconds.")
+print(f"Total memory used: {performance.total_mem / 1024:.2f} KB.")
