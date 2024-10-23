@@ -22,15 +22,20 @@ import inspect
 call_count = defaultdict(int)
 
 def fn_w_counter() -> (int, dict[str, int]):
-    """A function that counts the number of calls."""
-    caller_name = inspect.currentframe().f_back.f_code.co_name  # Get the name of the calling function
+    if not hasattr(fn_w_counter, "call_counter"):
+        fn_w_counter.call_counter = 0
+        fn_w_counter.caller_count_dict = {}
 
+    # Get the name of the caller
+    caller_name = __name__
+    fn_w_counter.call_counter += 1
 
-    # Increment the global counter
-    call_count[caller_name] += 1
+    # If the caller is already in the dictionary, increment its value
+    if caller_name in fn_w_counter.caller_count_dict:
+        fn_w_counter.caller_count_dict[caller_name] += 1
+    else:
+        # Otherwise, add it as a new key
+        fn_w_counter.caller_count_dict[caller_name] = 1
 
-    # Calculate the total number of calls
-    total_calls = sum(call_count.values())
-
-    # Return the total call count and the call counts for each function
-    return total_calls, dict(call_count)
+    # Return the total call count and the caller information
+    return fn_w_counter.call_counter, fn_w_counter.caller_count_dict
