@@ -2,7 +2,7 @@ def custom_power(x=0, /, e=1):
     """Calculate x raised to the power of e."""
     return (lambda x, e: x ** e)(x, e) #Direct Calculation
 
-def custom_equation(x: int = 0, /, y: int = 0, /,  a: int = 1, b: int = 1, *, c: int = 1) -> float:
+def custom_equation(x: int = 0, y: int = 0, a: int = 1, b: int = 1, *, c: int = 1) -> float:
     """
     A function that calculates the custom equation:
     
