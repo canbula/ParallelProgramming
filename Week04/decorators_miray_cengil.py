@@ -1,5 +1,6 @@
 import time
 import tracemalloc
+from functools import wraps
 
 class PerformanceTracker:
     """
@@ -57,6 +58,6 @@ def compute_squares(n):
 
 # Running the decorated function multiple times
 if __name__ == "__main__":
-compute_squares(1000)
-compute_squares(2000)
-compute_squares(3000)
+    compute_squares(1000)
+    compute_squares(2000)
+    compute_squares(3000)
