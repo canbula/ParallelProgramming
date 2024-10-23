@@ -46,7 +46,7 @@ class PerformanceTracker:
         
         return result
 
-def performance_tracker(func):
+def performance(func):
     """A simple function decorator to track performance."""
     return PerformanceTracker(func)
 
