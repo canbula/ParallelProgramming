@@ -1,4 +1,4 @@
-custom_power = lambda x=0, e=1: x ** e
+custom_power = lambda x=0, /, e=1: x ** e
 
 def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int = 1) -> float:
 
@@ -21,9 +21,10 @@ import inspect
 
 call_count = defaultdict(int)
 
-def fn_w_counter()-> (int, dict[str, int]):
+def fn_w_counter() -> (int, dict[str, int]):
     """A function that counts the number of calls."""
-    caller_name = inspect.stack()[1].function  # Get the name of the calling function
+    caller_name = inspect.currentframe().f_back.f_code.co_name  # Get the name of the calling function
+
 
     # Increment the global counter
     call_count[caller_name] += 1
