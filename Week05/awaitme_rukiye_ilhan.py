@@ -1,3 +1,4 @@
+import asyncio
 
 
 def awaitme(func):
