@@ -1,7 +1,6 @@
-import asyncio
 
 
-def decorator(func):
+def awaitme(func):
     async def wrapper(*args,**kwargs):
         rslt = func(*args,**kwargs)
         if asyncio.iscoroutine(rslt):
