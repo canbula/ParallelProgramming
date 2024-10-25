@@ -1,17 +1,13 @@
-def remove_duplicates(seq: list) ->list:
-    temp_set = set(seq)
-    seq = list(temp_set)
-    return seq
+def remove_duplicates(seq: list) -> list:
+    return list(set(seq))
 
-
-def list_counts(sew: list) -> dict:
+def list_counts(seq: list) -> dict:
     dict_c = {}
-    for x in sew:
-        cnt = sew.count(x)
-        dict_c[x]=cnt
+    for x in seq:
+        dict_c[x] = dict_c.get(x, 0) + 1 #eğer x varsa mevcut değeri döndür yoksa  default olarak 0 ver  üzeirine 1 ekleyerek her defasında arıtr varsa
     return dict_c
 
-def reverse_dict(d: dict) ->dict:
+def reverse_dict(d: dict) -> dict:
     dict_d = {}
     for x,y in d.items():
         dict_d[y] = x
