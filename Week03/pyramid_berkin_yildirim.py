@@ -7,4 +7,4 @@ def calculate_pyramid_height(blocks):
             height += 1
         else:
             break
-  return height
+    return height
