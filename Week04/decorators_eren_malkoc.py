@@ -2,10 +2,10 @@ import time
 import tracemalloc
 
 
-def performance_decorator(fn):
-    performance_decorator.counter = 0
-    performance_decorator.total_time = 0.0
-    performance_decorator.total_mem = 0
+def performance(fn):
+    performance.counter = 0
+    performance.total_time = 0.0
+    performance.total_mem = 0
 
     def wrapper(*args, **kwargs):
         
@@ -22,12 +22,12 @@ def performance_decorator(fn):
         tracemalloc.stop()
 
         
-        performance_decorator.counter += 1
-        performance_decorator.total_time += end_time
-        performance_decorator.total_mem += peak_mem
+        performance.counter += 1
+        performance.total_time += end_time
+        performance.total_mem += peak_mem
 
         
-        print(f"Execution {performance_decorator.counter}:")
+        print(f"Execution {performance.counter}:")
         print(f"Time: {end_time:.6f} seconds")
         print(f"Peak Memory Usage: {peak_mem / 1024:.2f} KB\n")
 
