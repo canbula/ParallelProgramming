@@ -21,7 +21,10 @@ def list_counts(seq:list)->dict:
 
 def reverse_dict(d:dict) -> dict:
   new_dict={}
-  for x,y in d.items():
-    new_dict.update({y:x})
-  
+  for x, y in d.items():
+   if y in new_dict:
+    new_dict[y].append(x)
+   else:
+     new_dict[y] = [x]
+    
   return new_dict
