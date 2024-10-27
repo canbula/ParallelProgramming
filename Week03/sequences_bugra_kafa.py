@@ -5,7 +5,9 @@ def remove_duplicates(seq:list)->list:
     if not i in new_list:
       new_list.append(i) 
   
-   return new_list
+  
+  
+  return new_list
      
  
 
