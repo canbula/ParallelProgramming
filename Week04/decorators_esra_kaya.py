@@ -1,26 +1,31 @@
 import time
 import tracemalloc
 
-class Performance:
-    def __init__(self, fn):
-        self.fn = fn
-        self.counter = 0
-        self.total_time = 0
-        self.total_mem = 0
-
-    def __call__(self, *args, **kwargs):
-        self.counter += 1
+def performance(func):
+    
+    def wrapper(*args, **kwargs):
+        if not hasattr(wrapper, "counter"):
+            wrapper.counter = 0
+            wrapper.total_time = 0
+            wrapper.total_mem = 0
 
         tracemalloc.start()
         start_time = time.time()
-
-        result = self.fn(*args, **kwargs)
-
-        end_time = time.time()
-        current, peak = tracemalloc.get_traced_memory()
+        
+        result = func(*args, **kwargs)
+        
+        time_taken = time.time() - start_time
+        current_mem, peak_mem = tracemalloc.get_traced_memory()
         tracemalloc.stop()
-
-        self.total_mem += peak
-        self.total_time += (end_time - start_time)
-
+        
+        wrapper.counter += 1
+        wrapper.total_time += time_taken
+        wrapper.total_mem += peak_mem
+        
+        print(f"'{func.__name__}' was called {wrapper.counter} times.")
+        print(f"Total time so far: {wrapper.total_time:.4f} seconds.")
+        print(f"Total peak memory used: {wrapper.total_mem / 1024:.2f} KB.\n")
+        
         return result
+
+    return wrapper
