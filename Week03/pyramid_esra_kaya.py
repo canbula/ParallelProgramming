@@ -1,16 +1,9 @@
-def calculate_pyramid_height(kup_sayisi):
-    if kup_sayisi <= 0:
-        return "Küp sayısı sıfırdan büyük olmalıdır."
+def calculate_pyramid_height(cube_number):
+    total_cube = 0
+    height = 0
     
-    toplam_kup = 0
-    yukseklik = 0
-    
-    while toplam_kup < kup_sayisi:
-        yukseklik += 1
-        toplam_kup += yukseklik
-        
-        if toplam_kup == kup_sayisi:
-            return yukseklik
-    
-    # Eğer toplam_kup, kup_sayisi'ni aşarsa bu piramit oluşturulamaz.
-    return "Bu küp sayısıyla bir piramit oluşturulamaz."
+    while total_cube < cube_number:
+        height += 1
+        total_cube += height
+        if total_cube == cube_number:
+            return height
