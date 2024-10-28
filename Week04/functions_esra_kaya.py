@@ -1,4 +1,4 @@
-def custom_power(x=0, /, e=1): return x ** e
+custom_power = lambda x=0, /, e=1: x ** e
 
 def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int = 1) -> float:
     """
