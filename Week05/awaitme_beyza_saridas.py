@@ -1,6 +1,6 @@
 import asyncio
 
-def coroutine_decorator(func):
+def awaitme(func):
     async def _wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
         
@@ -8,3 +8,4 @@ def coroutine_decorator(func):
             return await result
         
         return result
+    return _wrapper
