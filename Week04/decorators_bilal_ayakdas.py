@@ -15,12 +15,13 @@ def performance(fn):
     
     def calculate_perf(*args, **kwargs):
         begin_time = time()
-        memory_usage = getsizeof(fn(*args,**kwargs))
+        result = fn(*args,**kwargs)
+        memory_usage = getsizeof(result)
         end_time = time()
 
         setattr(performance,"counter",getattr(performance,"counter") + 1)
         setattr(performance,"total_time",getattr(performance,"total_time") + (end_time - begin_time))
         setattr(performance,"total_mem",getattr(performance,"total_mem") + memory_usage)
 
-        return fn(*args,**kwargs)
+        return result
     return calculate_perf
