@@ -18,7 +18,7 @@ def function_with_counter() -> (int, dict[str, int]):
         function_with_counter._total_calls = 0
         function_with_counter._module_calls = defaultdict(int)
     
-    current_module = __name__
+    current_module = "__name__"
     function_with_counter._total_calls += 1
     function_with_counter._module_calls[current_module] += 1
     
