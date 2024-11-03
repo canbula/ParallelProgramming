@@ -11,6 +11,6 @@ def awaitme(func):
             return await func(*args, **kwargs)
         else:
             loop = asyncio.get_event_loop()
-            return await loop.run_in_executor(None, functools.partial(func, *args, **kwargs))
+            return await loop.run_in_executor(None, lambda: func(*args, **kwargs))
     
     return wrapper
