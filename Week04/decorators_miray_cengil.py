@@ -1,45 +1,38 @@
-import os
-import inspect
 import time
-import random
-import tracemalloc
+import sys
 
 def performance(func):
     """
     A decorator to measure the performance of a function.
 
     Attributes:
-        counter: How many times the function has been called.
+        counter: The number of times the function has been called.
         total_time: The total time the function has taken to run.
-        total_mem: The total memory used by the function.
+        total_mem: The total memory used by the function in bytes.
     """
 
-    # Initialize the counters
-    performance.counter = 0
-    performance.total_time = 0.0
-    performance.total_mem = 0.0
+    if not hasattr(performance, 'counter'):
+        performance.counter = 0
+    if not hasattr(performance, 'total_time'):
+        performance.total_time = 0.0
+    if not hasattr(performance, 'total_mem'):
+        performance.total_mem = 0
 
     def wrapper(*args, **kwargs):
-        # Start tracking memory
-        tracemalloc.start()
-        
         # Record the start time
         start_time = time.time()
         
-        # Call the actual function
+        # Call the actual function and calculate memory usage
         result = func(*args, **kwargs)
+        memory_usage = sys.getsizeof(result)
         
-        # Calculate how long it took
+        # Calculate time taken
         time_taken = time.time() - start_time
         
-        # Capture the peak memory usage
-        current_mem, peak_mem = tracemalloc.get_traced_memory()
-        tracemalloc.stop()
-        
-        # Update the stats
+        # Update the statistics
         performance.counter += 1
         performance.total_time += time_taken
-        performance.total_mem += peak_mem  # Peak memory during execution
+        performance.total_mem += memory_usage
         
         return result
     
@@ -53,15 +46,15 @@ def example_function(x):
 
 @performance
 def memory_intensive_function(size):
-    return [random.randint(0, 100) for _ in range(size)]
+    return [0] * size
 
-# Execute test functions
-example_function(1)
-example_function(2)
-example_function(3)
-memory_intensive_function(1000000)
-
-# Access performance metrics
-print(f"Function called {performance.counter} times.")
-print(f"Total time taken: {performance.total_time:.4f} seconds.")
-print(f"Total memory used: {performance.total_mem / 1024:.2f} KB.")
+if __name__ == "__main__":
+    # Run test functions
+    example_function(1)
+    example_function(2)
+    memory_intensive_function(1000000)
+    
+    # Display performance metrics
+    print(f"Function called {performance.counter} times.")
+    print(f"Total time taken: {performance.total_time:.4f} seconds.")
+    print(f"Total memory used: {performance.total_mem / 1024:.2f} KB.")
