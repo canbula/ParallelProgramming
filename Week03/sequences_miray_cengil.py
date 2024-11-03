@@ -1,5 +1,3 @@
-from collections import defaultdict
-
 def remove_duplicates(seq: list) -> list:
     unique_list = []
     for number in seq:
@@ -12,12 +10,12 @@ def list_counts(seq: list) -> dict:
     for item in seq:
         if item in counts:
             counts[item] += 1
-        else: 
+        else:
             counts[item] = 1
     return counts
 
 def reverse_dict(d: dict) -> dict:
     new_dict = {}
     for key, value in d.items():
-        new_dict[value] = key 
+        new_dict[value] = key
     return new_dict
