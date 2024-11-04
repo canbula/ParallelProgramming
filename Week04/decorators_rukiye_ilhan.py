@@ -2,11 +2,11 @@ import tracemalloc
 import time
 
 
-def performance_decoraters(func):
-    if not hasattr(performance_decoraters ,'counter'):
-        performance_decoraters.counter = 0
-        performance_decoraters.total_time = 0
-        performance_decoraters.total_mem = 0
+def performance(func):
+    if not hasattr(performance,'counter'):
+        performance.counter = 0
+        performance.total_time = 0
+        performance.total_mem = 0
 
     def perform(*args,**kwargs):
         tracemalloc.start()  # start to follow memory
