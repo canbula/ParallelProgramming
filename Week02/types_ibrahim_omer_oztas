@@ -1,0 +1,4 @@
+my_int = 12
+my_float= 12.0
+my_bool = 12==0
+my_complex = 12+12j
