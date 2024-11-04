@@ -1,0 +1,26 @@
+import time
+import tracemalloc
+
+def performance(fn):
+    def _performance(*args, **kwargs):
+        if not hasattr(_performance, "counter"):
+            _performance.counter = 0
+            _performance.total_time = 0
+            _performance.total_mem = 0
+        
+        _performance.counter += 1
+        tracemalloc.start()
+        
+        start_time = time.time()
+        result = fn(*args, **kwargs)
+        end_time = time.time()
+        
+        current, peak = tracemalloc.get_traced_memory()
+        tracemalloc.stop()
+        
+        _performance.total_mem = peak
+        _performance.total_time += end_time - start_time
+        
+        return result
+
+    return _performance
