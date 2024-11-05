@@ -12,4 +12,3 @@ class Timer:
 
     def __exit__(self, exc_type, exc_value, exc_traceback):
         self.end_time = time.time()
-        return False
