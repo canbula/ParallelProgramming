@@ -38,5 +38,5 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest -q --tb=no 'Week03/test_functions.py'
-        pytest -q --tb=no 'Week03/test_decorators.py'
+        pytest -q --tb=no 'Week03/test_pyramid.py'
+        pytest -q --tb=no 'Week03/test_sequences.py'
