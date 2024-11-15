@@ -13,4 +13,4 @@ class Timer:
         self.end_time = time.time()
         elapsed_time = self.end_time - self.start_time
         print(f"Task finished! It took {elapsed_time:.2f} seconds.")
-        return False
+        return True
