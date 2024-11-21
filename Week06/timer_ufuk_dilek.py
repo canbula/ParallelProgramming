@@ -9,3 +9,4 @@ class Timer:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.end_time = time.time()
+        return True
