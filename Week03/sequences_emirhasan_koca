@@ -1,0 +1,20 @@
+def remove_duplicates(seq: list) -> list:
+    """
+    Bir listedeki tekrar eden öğeleri kaldırır ve sadece benzersiz öğeleri döndürür.
+    """
+    return list(set(seq))  # Set'e çevirerek tekrar edenleri kaldırır, sonra listeye döner.
+
+def list_counts(seq: list) -> dict:
+    """
+    Her öğenin kaç kez tekrarlandığını içeren bir sözlük döner.
+    """
+    counts = {}
+    for item in seq:
+        counts[item] = counts.get(item, 0) + 1  # Öğeyi sayar, yoksa 0'dan başlar.
+    return counts
+
+def reverse_dict(d: dict) -> dict:
+    """
+    Bir sözlüğün anahtarlarını ve değerlerini tersine çevirir.
+    """
+    return {v: k for k, v in d.items()}  # Sözlükte anahtar ve değeri yer değiştirir.
