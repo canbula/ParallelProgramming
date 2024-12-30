@@ -1,37 +1,52 @@
 import threading
 
-"""
-threaded(n)
-============
-
-A decorator to run a function multiple times in parallel threads.
-
-This decorator creates `n` threads to execute the decorated function.
-Each thread uses the same arguments and keyword arguments passed to the function.
-The main thread waits for all created threads to finish before continuing.
-
-Parameters
-----------
-n : int
-    The number of threads to create for executing the function.
-
-Notes
------
-- The function is executed `n` times, each in a separate thread.
-- Thread synchronization is handled using the `join()` method.
-"""
-
 def threaded(n):
-    def decorator(func):
-        def wrapper(*args, **kwargs):
-            threads = []
-            for number in range(n):
-                threads.append(threading.Thread(target=func, args=args, kwargs=kwargs))
+    """Creates a decorator that runs the decorated function in multiple threads.
 
-            for thread in threads:
-                thread.start()
+        This decorator creates `n` threads to execute the decorated function concurrently.
+        Each thread runs the same function with the same arguments. All threads are started
+        and then joined before returning.
 
-            for thread in threads:
-                thread.join()
-        return wrapper
-    return decorator
+        Parameters
+        ----------
+        n : int
+            Number of threads to create and run the function in
+
+        Returns
+        -------
+        Threaded
+            A decorator class that handles the thread creation and management
+
+        Examples
+        --------
+        >>> @threaded(3)
+        ... def example_function(x):
+        ...     print(f"Processing {x}")
+        ...
+        >>> example_function("test")
+        Processing test
+        Processing test
+        Processing test
+
+        Notes
+        -----
+        - All threads execute the same function with identical arguments
+        - The decorator waits for all threads to complete before returning
+        - No return values are captured from the threaded function executions
+
+        """
+    class Threaded:
+        def __init__(self, n):
+            self.n = n
+        def __call__(self, func):
+            def wrapper(*args, **kwargs):
+                threads = []
+                for i in range(self.n):
+                    t = threading.Thread(target=func, args=args, kwargs=kwargs)
+                    threads.append(t)
+                for t in threads:
+                    t.start()
+                for t in threads:
+                    t.join()
+            return wrapper
+    return Threaded(n)
