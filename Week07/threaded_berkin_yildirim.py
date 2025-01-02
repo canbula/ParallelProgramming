@@ -1,20 +1,21 @@
 import threading
 
-def repeat_in_threads(times):
+def threaded(n):
     """
-    Decorator to execute a function multiple times in separate threads.
+    Decorator to run a function n times in separate threads.
     """
-    def apply_decorator(target_function):
-        def execute_in_threads(*args, **kwargs):
-            thread_list = []
-            for _ in range(times):
-                t = threading.Thread(target=target_function, args=args, kwargs=kwargs)
-                thread_list.append(t)
-                t.start()
-            for t in thread_list:
-                t.join()
-        execute_in_threads.__name__ = target_function.__name__
-        execute_in_threads.__doc__ = target_function.__doc__
-        execute_in_threads.__module__ = target_function.__module__
-        return execute_in_threads
-    return apply_decorator
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            threads = []
+            for i in range(n):
+                thread = threading.Thread(target=func, args=args, kwargs=kwargs)
+                threads.append(thread)
+                thread.start()
+            for thread in threads:
+                thread.join()
+        wrapper.__name__ = func.__name__
+        wrapper.__doc__ = func.__doc__
+        wrapper.__module__ = func.__module__
+        return wrapper
+    return decorator
+r
