@@ -1,7 +1,7 @@
 def calculate_pyramid_height(number_of_blocks):
     if number_of_blocks <= 0:
         return 0
-    height = int((-1 + (1 + 8 * blocks) ** 0.5) / 2) 
+    height = int((-1 + (1 + 8 * number_of_blocks) ** 0.5) / 2) 
     return height #O(1)
 
 # def calculate_pyramid_height(number_of_blocks): 
