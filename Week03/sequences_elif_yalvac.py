@@ -8,8 +8,4 @@ def list_counts(seq: list) -> dict:
 
 
 def reverse_dict(d: dict) -> dict:
-    from collections import defaultdict
-    rev = defaultdict(list)
-    for k, v in d.items():
-        rev[v].append(k)
-    return dict(rev)
+    return {v: k for k, v in d.items()}
