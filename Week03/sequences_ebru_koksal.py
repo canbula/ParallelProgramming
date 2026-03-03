@@ -18,7 +18,7 @@ def list_counts(seq: list) -> dict:
 
 def reverse_dict(d: dict) -> dict:
   """This function reverses the keys and values of a dictionary"""
-    reversed_dict = {}
-    for key, value in d.items():
-        reversed_dict[value] = key
-    return reversed_dict
+  reversed_dict = {}
+  for key, value in d.items():
+      reversed_dict[value] = key
+  return reversed_dict
