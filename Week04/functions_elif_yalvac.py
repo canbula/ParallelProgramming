@@ -1,5 +1,4 @@
 from collections import defaultdict
-import inspect
 from typing import Tuple, Dict
 
 _total_calls = 0
@@ -23,6 +22,7 @@ def custom_equation(x: int = 0, y: int = 0, /,
     :param c: keyword-only integer, default 1
     :return: result of (x**a + y**b) / c as float
     """
+
     for val in (x, y, a, b, c):
         if not isinstance(val, int):
             raise TypeError("must be int")
@@ -34,6 +34,6 @@ def custom_equation(x: int = 0, y: int = 0, /,
 def fn_w_counter() -> (int, dict[str, int]):
     global _total_calls
     _total_calls += 1
-    caller = inspect.stack()[1].frame.f_globals.get("__name__", "<unknown>")
+    caller = __name__ 
     _caller_counts[caller] += 1
     return _total_calls, dict(_caller_counts)
