@@ -20,8 +20,6 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
         :param c: keyword-only integer, default 1
         :return: result of (x**a + y**b) / c as float    
     """
-n: Hesaplama sonucu float olarak doner.
-    """
     return float((x**a + y**b) / c)
 
 # 3. fn_w_counter
