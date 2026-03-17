@@ -24,7 +24,7 @@ import inspect
 _total_calls = 0
 _caller_counts = defaultdict(int)
 
-def fn_w_counter() -> tuple[int, dict[str, int]]:
+def fn_w_counter() -> Tuple[int, Dict[str, int]]:
     global _total_calls
     _total_calls += 1
     caller = inspect.currentframe().f_back.f_globals.get('__name__', '<unknown>')
