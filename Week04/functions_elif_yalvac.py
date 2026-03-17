@@ -21,13 +21,13 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
 # 3. fn_w_counter
 from collections import defaultdict
 import inspect
+from typing import Tuple, Dict
 
-_total_calls = 0
-_caller_counts = defaultdict(int)
-def fn_w_counter() -> tuple[int, dict[str, int]]:
+def fn_w_counter() -> Tuple[int, Dict[str, int]]:
     global _total_calls
     _total_calls += 1
-    caller_frame = inspect.currentframe().f_back
-    caller = caller_frame.f_globals.get('__name__', '<unknown>')
+    current_frame = inspect.currentframe()
+    caller_frame = current_frame.f_back
+    caller = caller_frame.f_globals.get('__name__', '<unknown>')    
     _caller_counts[caller] += 1
     return _total_calls, dict(_caller_counts)
