@@ -27,9 +27,9 @@ def fn_w_counter() -> (int, dict[str, int]):
     fn_w_counter.callers_dict = {}
   
   fn_w_counter.call_count += 1
-  caller = __name__
+  caller_name = __name__
 
-  if caller in fn_w_counter.callers_dict:
+  if caller_name in fn_w_counter.callers_dict:
     fn_w_counter.callers_dict[caller_name] += 1
   else:
     fn_w_counter.callers_dict[caller_name] = 1
