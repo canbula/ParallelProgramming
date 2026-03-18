@@ -1,11 +1,6 @@
-from collections import defaultdict
-from typing import Tuple, Dict
-
-_total_calls = 0
-_caller_counts = defaultdict(int)
-
 # 1. custom_power
 custom_power = lambda x=0, /, e=1: x ** e
+
 
 
 # 2. custom_equation
@@ -26,14 +21,13 @@ def custom_equation(x: int = 0, y: int = 0, /,
     for val in (x, y, a, b, c):
         if not isinstance(val, int):
             raise TypeError("must be int")
-
     return (x ** a + y ** b) / c
+
 
 
 # 3. fn_w_counter
 def fn_w_counter() -> (int, dict[str, int]):
-    global _total_calls
-    _total_calls += 1
-    caller = __name__ 
-    _caller_counts[caller] += 1
-    return _total_calls, dict(_caller_counts)
+    if not hasattr(fn_w_counter, "count"):
+        fn_w_counter.count = 0
+    fn_w_counter.count += 1
+    return fn_w_counter.count, {__name__.split('.')[-1]: fn_w_counter.count}
