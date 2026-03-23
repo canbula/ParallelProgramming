@@ -2,6 +2,10 @@ import time
 import tracemalloc
 
 def performance(func):
+    if not hasattr(performance, 'counter'):
+        performance.counter = 0
+        performance.total_time = 0.0
+        performance.total_mem = 0.0
     def wrapper(*args, **kwargs):
         # 1. Ölçümleri Başlat
         tracemalloc.start()
@@ -16,14 +20,11 @@ def performance(func):
         tracemalloc.stop()
         
         # 4. İstatistikleri Güncelle
-        wrapper.counter += 1
-        wrapper.total_time += (end_time - start_time)
-        wrapper.total_mem += peak_mem
+        performance.counter += 1
+        performance.total_time += (end_time - start_time)
+        performance.total_mem += peak_mem
         
         return result
-    wrapper.counter = 0
-    wrapper.total_time = 0.0
-    wrapper.total_mem = 0
     wrapper.__name__ = func.__name__
     wrapper.__doc__ = func.__doc__
     
