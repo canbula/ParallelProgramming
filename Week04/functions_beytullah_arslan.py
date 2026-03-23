@@ -14,7 +14,7 @@ def custom_equation(x: int = 0 , y: int = 0 , / , a: int = 1 , b: int = 1 , * , 
 
     return (x**a + y**b) / c
 
-def fn_w_counter() -> tuple[int, dict[str, int]]:
+def fn_w_counter() -> (int, dict[str, int]):
     if not hasattr(fn_w_counter,'call_counter'):
         fn_w_counter.call_counter = 0
         fn_w_counter.caller_dict = {}
