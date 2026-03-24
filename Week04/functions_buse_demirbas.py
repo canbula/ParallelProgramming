@@ -1,27 +1,28 @@
-def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int = 1) -> float:
-    """
-    Calculates (x**a + y**b) / c with specific parameter rules.
-
-    :param x: Positional-only base x
-    :param y: Positional-only base y
-    :param a: Positional-or-keyword exponent a
-    :param b: Positional-or-keyword exponent b
-    :param c: Keyword-only divisor c
-    :return: The result of the equation as float
-    """
-    if not all(isinstance(i, int) for i in [x, y, a, b, c]):
-        raise TypeError("All parameters must be integers")
-    
-    return float((x**a + y**b) / c)
+import sys
 
 custom_power = lambda x=0, /, e=1: x**e
 
-_counter = 0
-_call_map = {}
+def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int = 1) -> float:
+    """
+    Calculates (x**a + y**b) / c.
+    :param x: base x
+    :param y: base y
+    :param a: exp a
+    :param b: exp b
+    :param c: div c
+    :return: float result
+    """
+
+    if not all(isinstance(v, int) for v in (x, y, a, b, c)):
+        raise TypeError("Arguments must be integers")
+    return float((x**a + y**b) / c)
+
 
 def fn_w_counter() -> tuple[int, dict[str, int]]:
-    global _counter
-    _counter += 1
-    module_name = __name__.split('.')[-1] 
-    _call_map[module_name] = _counter
-    return _counter, _call_map
+
+    if not hasattr(fn_w_counter, "count"):
+        fn_w_counter.count = 0
+    
+    fn_w_counter.count += 1
+    module_name = __name__.split('.')[-1]
+    return fn_w_counter.count, {module_name: fn_w_counter.count}
