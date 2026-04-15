@@ -1,0 +1,34 @@
+exec("custom_power = lambda x=0, /, e=1: x ** e", globals())
+
+
+def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int = 1) -> float:
+    """
+    Computes (x**a + y**b) / c.
+
+    :param x: Base for the first term. Default 0.
+    :type x: int
+    :param y: Base for the second term. Default 0.
+    :type y: int
+    :param a: Exponent for x. Default 1.
+    :type a: int
+    :param b: Exponent for y. Default 1.
+    :type b: int
+    :param c: Divisor. Default 1.
+    :type c: int
+    :return: The result of (x**a + y**b) / c.
+    :rtype: float
+    """
+    if not isinstance(x, int) or not isinstance(y, int):
+        raise TypeError("x and y must be integers")
+    if not isinstance(a, int) or not isinstance(b, int) or not isinstance(c, int):
+        raise TypeError("a, b and c must be integers")
+    return (x ** a + y ** b) / c
+
+
+_counter = {}
+_module_name = __name__
+
+def fn_w_counter() -> (int, dict[str, int]):
+    _counter[_module_name] = _counter.get(_module_name, 0) + 1
+    total = _counter[_module_name]
+    return (total, {_module_name: total})
