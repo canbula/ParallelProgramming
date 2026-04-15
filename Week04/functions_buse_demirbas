@@ -1,6 +1,5 @@
 exec("custom_power = lambda x=0, /, e=1: x ** e", globals())
 
-_counter = {}
 
 def _make_custom_equation():
     src = '''
@@ -31,17 +30,21 @@ def custom_equation(x: int = 0, y: int = 0, /, a: int = 1, b: int = 1, *, c: int
     exec(src, ns)
     return ns["custom_equation"]
 
+
 custom_equation = _make_custom_equation()
 
+
 def _make_fn_w_counter():
+    counter = {}
     src = '''
 def fn_w_counter() -> (int, dict[str, int]):
-    _counter[__name__] = _counter.get(__name__, 0) + 1
-    total = _counter[__name__]
+    counter[__name__] = counter.get(__name__, 0) + 1
+    total = counter[__name__]
     return (total, {__name__: total})
 '''
-    ns = {"_counter": _counter, "__name__": __name__}
+    ns = {"counter": counter, "__name__": __name__}
     exec(src, ns)
     return ns["fn_w_counter"]
+
 
 fn_w_counter = _make_fn_w_counter()
