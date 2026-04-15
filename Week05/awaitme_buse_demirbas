@@ -1,0 +1,12 @@
+import asyncio
+import functools
+
+def to_coroutine(func):
+    @functools.wraps(func)
+    async def wrapper(*args, **kwargs):
+        # Senkron fonksiyonu async ortamda çalıştır
+        loop = asyncio.get_event_loop()
+        result = await loop.run_in_executor(None, func, *args, **kwargs)
+        return result
+    
+    return wrapper
