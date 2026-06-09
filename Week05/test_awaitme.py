@@ -1,5 +1,6 @@
 import os
 import asyncio
+import inspect
 
 
 files = [f for f in os.listdir(os.path.dirname(__file__)) if f.startswith("awaitme")]
@@ -23,8 +24,8 @@ def test_awaitable():
         @eval(f[:-3]).awaitme
         def dummy_function(x: int = 0, y: int = 0) -> int:
             return x + y
-        assert asyncio.iscoroutinefunction(dummy_awaitable), "awaitme is not awaitable in " + f[:-3]
-        assert asyncio.iscoroutinefunction(dummy_function), "awaitme is not awaitable in " + f[:-3]
+        assert inspect.iscoroutinefunction(dummy_awaitable), "awaitme is not awaitable in " + f[:-3]
+        assert inspect.iscoroutinefunction(dummy_function), "awaitme is not awaitable in " + f[:-3]
 
 def test_values():
     for f in files:
